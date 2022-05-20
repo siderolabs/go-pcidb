@@ -1,0 +1,12 @@
+# THIS FILE WAS AUTOMATICALLY GENERATED, PLEASE DO NOT EDIT.
+#
+# Generated on 2022-05-20T16:46:37Z by kres 0bf4e28-dirty.
+
+**
+!pkg
+!go.mod
+!go.sum
+!.golangci.yml
+!README.md
+!.markdownlint.json
+!.license-header.go.txt

@@ -1,0 +1,6 @@
+kind: golang.Generate
+spec:
+  goGenerateSpecs:
+    - source: ./pkg
+      copy:
+        - pkg/
