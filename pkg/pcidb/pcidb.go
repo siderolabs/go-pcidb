@@ -45,32 +45,24 @@ type VendorProductSubsystem = uint64
 
 // LookupClass by ID.
 func LookupClass(classID Class) (string, bool) {
-	name, ok := Classes[classID]
-
-	return name, ok
+	return lookupClass(classID)
 }
 
 // LookupSubclass by ID.
 func LookupSubclass(classID Class, subclassID Subclass) (string, bool) {
 	key := uint16(classID)<<8 | uint16(subclassID)
 
-	name, ok := Subclasses[key]
-
-	return name, ok
+	return lookupSubclass(key)
 }
 
 // LookupVendor by ID.
 func LookupVendor(vendorID Vendor) (string, bool) {
-	name, ok := Vendors[vendorID]
-
-	return name, ok
+	return lookupVendor(vendorID)
 }
 
 // LookupProduct by vendor and product IDs.
 func LookupProduct(vendorID Vendor, productID Product) (string, bool) {
 	key := uint32(vendorID)<<16 | uint32(productID)
 
-	name, ok := Products[key]
-
-	return name, ok
+	return lookupProduct(key)
 }

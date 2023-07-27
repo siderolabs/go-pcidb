@@ -1,24 +1,31 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED, PLEASE DO NOT EDIT.
 #
-# Generated on 2022-05-20T16:44:06Z by kres 0bf4e28-dirty.
+# Generated on 2023-07-27T17:21:22Z by kres latest.
 
 # common variables
 
 SHA := $(shell git describe --match=none --always --abbrev=8 --dirty)
 TAG := $(shell git describe --tag --always --dirty)
+ABBREV_TAG := $(shell git describe --tags >/dev/null 2>/dev/null && git describe --tag --always --match v[0-9]\* --abbrev=0 || echo 'undefined')
 BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
 ARTIFACTS := _out
+WITH_DEBUG ?= false
+WITH_RACE ?= false
 REGISTRY ?= ghcr.io
 USERNAME ?= siderolabs
 REGISTRY_AND_USERNAME ?= $(REGISTRY)/$(USERNAME)
-GOFUMPT_VERSION ?= v0.3.1
-GO_VERSION ?= 1.18
-GOIMPORTS_VERSION ?= v0.1.10
-PROTOBUF_GO_VERSION ?= 1.28.0
-GRPC_GO_VERSION ?= 1.2.0
-GRPC_GATEWAY_VERSION ?= 2.10.0
-VTPROTOBUF_VERSION ?= 0.3.0
+PROTOBUF_GO_VERSION ?= 1.28.1
+GRPC_GO_VERSION ?= 1.3.0
+GRPC_GATEWAY_VERSION ?= 2.16.0
+VTPROTOBUF_VERSION ?= 0.4.0
 DEEPCOPY_VERSION ?= v0.5.5
+GOLANGCILINT_VERSION ?= v1.53.3
+GOFUMPT_VERSION ?= v0.5.0
+GO_VERSION ?= 1.20
+GOIMPORTS_VERSION ?= v0.11.0
+GO_BUILDFLAGS ?=
+GO_LDFLAGS ?=
+CGO_ENABLED ?= 0
 TESTPKGS ?= ./...
 KRES_IMAGE ?= ghcr.io/siderolabs/kres:latest
 CONFORMANCE_IMAGE ?= ghcr.io/siderolabs/conform:latest
@@ -34,20 +41,26 @@ COMMON_ARGS = --file=Dockerfile
 COMMON_ARGS += --progress=$(PROGRESS)
 COMMON_ARGS += --platform=$(PLATFORM)
 COMMON_ARGS += --push=$(PUSH)
-COMMON_ARGS += --build-arg=ARTIFACTS=$(ARTIFACTS)
-COMMON_ARGS += --build-arg=SHA=$(SHA)
-COMMON_ARGS += --build-arg=TAG=$(TAG)
-COMMON_ARGS += --build-arg=USERNAME=$(USERNAME)
-COMMON_ARGS += --build-arg=TOOLCHAIN=$(TOOLCHAIN)
-COMMON_ARGS += --build-arg=GOFUMPT_VERSION=$(GOFUMPT_VERSION)
-COMMON_ARGS += --build-arg=GOIMPORTS_VERSION=$(GOIMPORTS_VERSION)
-COMMON_ARGS += --build-arg=PROTOBUF_GO_VERSION=$(PROTOBUF_GO_VERSION)
-COMMON_ARGS += --build-arg=GRPC_GO_VERSION=$(GRPC_GO_VERSION)
-COMMON_ARGS += --build-arg=GRPC_GATEWAY_VERSION=$(GRPC_GATEWAY_VERSION)
-COMMON_ARGS += --build-arg=VTPROTOBUF_VERSION=$(VTPROTOBUF_VERSION)
-COMMON_ARGS += --build-arg=DEEPCOPY_VERSION=$(DEEPCOPY_VERSION)
-COMMON_ARGS += --build-arg=TESTPKGS=$(TESTPKGS)
-TOOLCHAIN ?= docker.io/golang:1.18-alpine
+COMMON_ARGS += --build-arg=ARTIFACTS="$(ARTIFACTS)"
+COMMON_ARGS += --build-arg=SHA="$(SHA)"
+COMMON_ARGS += --build-arg=TAG="$(TAG)"
+COMMON_ARGS += --build-arg=ABBREV_TAG="$(ABBREV_TAG)"
+COMMON_ARGS += --build-arg=USERNAME="$(USERNAME)"
+COMMON_ARGS += --build-arg=REGISTRY="$(REGISTRY)"
+COMMON_ARGS += --build-arg=TOOLCHAIN="$(TOOLCHAIN)"
+COMMON_ARGS += --build-arg=CGO_ENABLED="$(CGO_ENABLED)"
+COMMON_ARGS += --build-arg=GO_BUILDFLAGS="$(GO_BUILDFLAGS)"
+COMMON_ARGS += --build-arg=GO_LDFLAGS="$(GO_LDFLAGS)"
+COMMON_ARGS += --build-arg=PROTOBUF_GO_VERSION="$(PROTOBUF_GO_VERSION)"
+COMMON_ARGS += --build-arg=GRPC_GO_VERSION="$(GRPC_GO_VERSION)"
+COMMON_ARGS += --build-arg=GRPC_GATEWAY_VERSION="$(GRPC_GATEWAY_VERSION)"
+COMMON_ARGS += --build-arg=VTPROTOBUF_VERSION="$(VTPROTOBUF_VERSION)"
+COMMON_ARGS += --build-arg=DEEPCOPY_VERSION="$(DEEPCOPY_VERSION)"
+COMMON_ARGS += --build-arg=GOLANGCILINT_VERSION="$(GOLANGCILINT_VERSION)"
+COMMON_ARGS += --build-arg=GOIMPORTS_VERSION="$(GOIMPORTS_VERSION)"
+COMMON_ARGS += --build-arg=GOFUMPT_VERSION="$(GOFUMPT_VERSION)"
+COMMON_ARGS += --build-arg=TESTPKGS="$(TESTPKGS)"
+TOOLCHAIN ?= docker.io/golang:1.20-alpine
 
 # help menu
 
@@ -82,6 +95,18 @@ respectively.
 
 endef
 
+ifneq (, $(filter $(WITH_RACE), t true TRUE y yes 1))
+GO_BUILDFLAGS += -race
+CGO_ENABLED := 1
+GO_LDFLAGS += -linkmode=external -extldflags '-static'
+endif
+
+ifneq (, $(filter $(WITH_DEBUG), t true TRUE y yes 1))
+GO_BUILDFLAGS += -tags sidero.debug
+else
+GO_LDFLAGS += -s -w
+endif
+
 all: unit-tests lint
 
 .PHONY: clean
@@ -93,6 +118,9 @@ target-%:  ## Builds the specified target defined in the Dockerfile. The build r
 
 local-%:  ## Builds the specified target defined in the Dockerfile using the local output type. The build result will be output to the specified local destination.
 	@$(MAKE) target-$* TARGET_ARGS="--output=type=local,dest=$(DEST) $(TARGET_ARGS)"
+
+generate:  ## Generate .proto definitions.
+	@$(MAKE) local-$@ DEST=./
 
 lint-golangci-lint:  ## Runs golangci-lint linter.
 	@$(MAKE) target-$@
@@ -107,11 +135,11 @@ fmt:  ## Formats the source code
 		go install mvdan.cc/gofumpt@$(GOFUMPT_VERSION) && \
 		gofumpt -w ."
 
-lint-goimports:  ## Runs goimports linter.
+lint-govulncheck:  ## Runs govulncheck linter.
 	@$(MAKE) target-$@
 
-generate:  ## Generate .proto definitions.
-	@$(MAKE) local-$@ DEST=./
+lint-goimports:  ## Runs goimports linter.
+	@$(MAKE) target-$@
 
 .PHONY: base
 base:  ## Prepare base toolchain
@@ -127,14 +155,14 @@ unit-tests-race:  ## Performs unit tests with race detection enabled.
 
 .PHONY: coverage
 coverage:  ## Upload coverage data to codecov.io.
-	bash -c "bash <(curl -s https://codecov.io/bash) -f $(ARTIFACTS)/coverage.txt -X fix"
+	bash -c "bash <(curl -s https://codecov.io/bash) -f $(ARTIFACTS)/coverage-unit-tests.txt -X fix"
 
 .PHONY: lint-markdown
 lint-markdown:  ## Runs markdownlint.
 	@$(MAKE) target-$@
 
 .PHONY: lint
-lint: lint-golangci-lint lint-gofumpt lint-goimports lint-markdown  ## Run all linters for the project.
+lint: lint-golangci-lint lint-gofumpt lint-govulncheck lint-goimports lint-markdown  ## Run all linters for the project.
 
 .PHONY: rekres
 rekres:

@@ -59,8 +59,8 @@ func main() {
 		log.Fatalf("error: %s", err)
 	}
 
-	g.Printf("// Classes is a map of Class to name.\n")
-	g.Printf("var Classes = map[Class]string{\n")
+	g.Printf("func lookupClass(key Class) (string, bool) {\n")
+	g.Printf("\tswitch (key) {\n")
 
 	classIDs := make([]Class, 0, len(Classes))
 
@@ -71,13 +71,16 @@ func main() {
 	sort.Slice(classIDs, func(i, j int) bool { return classIDs[i] < classIDs[j] })
 
 	for _, classID := range classIDs {
-		g.Printf("0x%02x: %q,\n", classID, Classes[classID])
+		g.Printf("\t\tcase 0x%02x: return %q, true\n", classID, Classes[classID])
 	}
+
+	g.Printf("\tdefault: return \"\", false\n")
+	g.Printf("\t}\n")
 
 	g.Printf("}\n")
 
-	g.Printf("// Subclasses is a map of ClassSubclass to name.\n")
-	g.Printf("var Subclasses = map[ClassSubclass]string{\n")
+	g.Printf("\nfunc lookupSubclass(key ClassSubclass) (string, bool) {\n")
+	g.Printf("\tswitch (key) {\n")
 
 	subclassIDs := make([]ClassSubclass, 0, len(Subclasses))
 
@@ -88,13 +91,16 @@ func main() {
 	sort.Slice(subclassIDs, func(i, j int) bool { return subclassIDs[i] < subclassIDs[j] })
 
 	for _, subclassID := range subclassIDs {
-		g.Printf("0x%04x: %q,\n", subclassID, Subclasses[subclassID])
+		g.Printf("case 0x%04x: return %q, true\n", subclassID, Subclasses[subclassID])
 	}
+
+	g.Printf("\tdefault: return \"\", false\n")
+	g.Printf("\t}\n")
 
 	g.Printf("}\n")
 
-	g.Printf("// ProgrammingInterfaces is a map of ClassSubclassProgrammingInterface to name.\n")
-	g.Printf("var ProgrammingInterfaces = map[ClassSubclassProgrammingInterface]string{\n")
+	g.Printf("\nfunc lookupProgrammingInterface(key ClassSubclassProgrammingInterface) (string, bool) {\n")
+	g.Printf("\tswitch (key) {\n")
 
 	piIDs := make([]ClassSubclassProgrammingInterface, 0, len(ProgrammingInterfaces))
 
@@ -105,13 +111,16 @@ func main() {
 	sort.Slice(piIDs, func(i, j int) bool { return piIDs[i] < piIDs[j] })
 
 	for _, piID := range piIDs {
-		g.Printf("0x%06x: %q,\n", piID, ProgrammingInterfaces[piID])
+		g.Printf("case 0x%06x: return %q, true\n", piID, ProgrammingInterfaces[piID])
 	}
+
+	g.Printf("\tdefault: return \"\", false\n")
+	g.Printf("\t}\n")
 
 	g.Printf("}\n")
 
-	g.Printf("// Vendors is a map of Vendor to name.\n")
-	g.Printf("var Vendors = map[Vendor]string{\n")
+	g.Printf("\nfunc lookupVendor(key Vendor) (string, bool) {\n")
+	g.Printf("\tswitch (key) {\n")
 
 	vendorIDs := make([]Vendor, 0, len(Vendors))
 
@@ -122,13 +131,16 @@ func main() {
 	sort.Slice(vendorIDs, func(i, j int) bool { return vendorIDs[i] < vendorIDs[j] })
 
 	for _, vendorID := range vendorIDs {
-		g.Printf("0x%04x: %q,\n", vendorID, Vendors[vendorID])
+		g.Printf("case 0x%04x: return %q, true \n", vendorID, Vendors[vendorID])
 	}
+
+	g.Printf("\tdefault: return \"\", false\n")
+	g.Printf("\t}\n")
 
 	g.Printf("}\n")
 
-	g.Printf("// Products is a map of VendorProduct to name.\n")
-	g.Printf("var Products = map[VendorProduct]string{\n")
+	g.Printf("\nfunc lookupProduct(key VendorProduct) (string, bool) {\n")
+	g.Printf("\tswitch (key) {\n")
 
 	productIDs := make([]VendorProduct, 0, len(Products))
 
@@ -139,13 +151,16 @@ func main() {
 	sort.Slice(productIDs, func(i, j int) bool { return productIDs[i] < productIDs[j] })
 
 	for _, productID := range productIDs {
-		g.Printf("0x%08x: %q,\n", productID, Products[productID])
+		g.Printf("case 0x%08x: return %q, true\n", productID, Products[productID])
 	}
+
+	g.Printf("\tdefault: return \"\", false\n")
+	g.Printf("\t}\n")
 
 	g.Printf("}\n")
 
-	g.Printf("// Subsystems is a map of VendorProductSubsystem to Subsystem.\n")
-	g.Printf("var Subsystems = map[VendorProductSubsystem]SubsystemInfo{\n")
+	g.Printf("\nfunc lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {\n")
+	g.Printf("\tswitch (key) {\n")
 
 	subsystemIDs := make([]VendorProductSubsystem, 0, len(Subsystems))
 
@@ -156,8 +171,11 @@ func main() {
 	sort.Slice(subsystemIDs, func(i, j int) bool { return subsystemIDs[i] < subsystemIDs[j] })
 
 	for _, subsystemID := range subsystemIDs {
-		g.Printf("0x%012x: { Vendor: 0x%04x, Name: %q },\n", subsystemID, Subsystems[subsystemID].Vendor, Subsystems[subsystemID].Name)
+		g.Printf("case 0x%012x: return SubsystemInfo{ Vendor: 0x%04x, Name: %q }, true\n", subsystemID, Subsystems[subsystemID].Vendor, Subsystems[subsystemID].Name)
 	}
+
+	g.Printf("\tdefault: return SubsystemInfo{}, false\n")
+	g.Printf("\t}\n")
 
 	g.Printf("}\n")
 
