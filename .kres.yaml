@@ -4,3 +4,7 @@ spec:
     - source: ./pkg
       copy:
         - pkg/
+---
+kind: service.CodeCov
+spec:
+  enabled: false
