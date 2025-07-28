@@ -185,6 +185,8 @@ func lookupSubclass(key ClassSubclass) (string, bool) {
 		return "SD Host controller", true
 	case 0x0806:
 		return "IOMMU", true
+	case 0x0807:
+		return "Root Complex Event Collector", true
 	case 0x0880:
 		return "System peripheral", true
 	case 0x0899:
@@ -3993,6 +3995,8 @@ func lookupVendor(key Vendor) (string, bool) {
 		return "Nallatech Ltd.", true
 	case 0x1993:
 		return "Innominate Security Technologies AG", true
+	case 0x1998:
+		return "Toyou Feiji Electronics Co., Ltd.", true
 	case 0x1999:
 		return "A-Logics", true
 	case 0x199a:
@@ -4327,6 +4331,8 @@ func lookupVendor(key Vendor) (string, bool) {
 		return "Exablaze", true
 	case 0x1cf0:
 		return "Akitio", true
+	case 0x1cf2:
+		return "ZTE Corp.", true
 	case 0x1cf7:
 		return "Subspace Dynamics", true
 	case 0x1cfa:
@@ -4439,6 +4445,8 @@ func lookupVendor(key Vendor) (string, bool) {
 		return "Sage Microelectronics Corp.", true
 	case 0x1dd4:
 		return "Swissbit AG", true
+	case 0x1dd5:
+		return "Manli Technology Group Limited", true
 	case 0x1dd8:
 		return "AMD Pensando Systems", true
 	case 0x1ddd:
@@ -4665,6 +4673,8 @@ func lookupVendor(key Vendor) (string, bool) {
 		return "Efinix, Inc.", true
 	case 0x1f82:
 		return "d-Matrix", true
+	case 0x1f90:
+		return "Quside Technologies", true
 	case 0x1f99:
 		return "Shenzhen Techwinsemi Technology Co., Ltd.", true
 	case 0x1f9d:
@@ -4719,10 +4729,14 @@ func lookupVendor(key Vendor) (string, bool) {
 		return "CAEN S.p.A.", true
 	case 0x2036:
 		return "Netforward Microelectronics Co., Ltd.", true
+	case 0x203b:
+		return "XTX Markets Technologies Ltd.", true
 	case 0x2046:
 		return "GXMICRO Technology (Shanghai) Co., Ltd.", true
 	case 0x2048:
 		return "Beijing SpaceControl Technology Co.Ltd", true
+	case 0x2058:
+		return "Lime Microsystems Ltd.", true
 	case 0x205c:
 		return "Zhejiang VMing Semiconductor Co., Ltd.", true
 	case 0x2061:
@@ -4739,14 +4753,28 @@ func lookupVendor(key Vendor) (string, bool) {
 		return "Shenzhen Wodposit Electronics Co., Ltd.", true
 	case 0x2096:
 		return "Kaitian Information Technology Co., Ltd.", true
+	case 0x2099:
+		return "Rolling Wireless S.a.r.l.", true
 	case 0x209b:
 		return "BitIntelligence Technology", true
 	case 0x209f:
 		return "Mobilint, Inc.", true
 	case 0x20a7:
 		return "EEVengers Inc.", true
+	case 0x20a8:
+		return "Rayson HI-TECH(SZ) Co., Ltd.", true
 	case 0x20a9:
 		return "LDA Technologies Ltd.", true
+	case 0x20ba:
+		return "Hangzhou Hikstorage Technology Co., Ltd.", true
+	case 0x20bb:
+		return "Quantum Machines", true
+	case 0x20bc:
+		return "Xinsheng Technology Co., Ltd.", true
+	case 0x20d0:
+		return "Telin Semiconductor (Wuhan) Co., Ltd.", true
+	case 0x20d2:
+		return "Awide Labs LTD.", true
 	case 0x20f4:
 		return "TRENDnet", true
 	case 0x2116:
@@ -4813,6 +4841,8 @@ func lookupVendor(key Vendor) (string, bool) {
 		return "Ice Lake-LP PCI Express Root Port #3", true
 	case 0x3513:
 		return "ARCOM Control Systems Ltd", true
+	case 0x3633:
+		return "DeepCool", true
 	case 0x369a:
 		return "HighSecLabs, Ltd.", true
 	case 0x37d9:
@@ -4825,6 +4855,8 @@ func lookupVendor(key Vendor) (string, bool) {
 		return "Lenovo (wrong ID)", true
 	case 0x3d3d:
 		return "3DLabs", true
+	case 0x3e08:
+		return "Sinead Tech Co., Ltd", true
 	case 0x4005:
 		return "Avance Logic Inc.", true
 	case 0x4033:
@@ -4835,6 +4867,8 @@ func lookupVendor(key Vendor) (string, bool) {
 		return "Digital Equipment Corp", true
 	case 0x4144:
 		return "Alpha Data", true
+	case 0x4149:
+		return "AIMOTIVE Kft.", true
 	case 0x4150:
 		return "ONA Electroerosion", true
 	case 0x415a:
@@ -5087,6 +5121,8 @@ func lookupVendor(key Vendor) (string, bool) {
 		return "3Com (wrong ID)", true
 	case 0x9902:
 		return "Stargen Inc.", true
+	case 0x9999:
+		return "MetaX Integrated Circuits (Shanghai) Co., Ltd.", true
 	case 0x9a11:
 		return "Tiger Lake-H Gaussian & Neural Accelerator", true
 	case 0x9d32:
@@ -5267,6 +5303,8 @@ func lookupVendor(key Vendor) (string, bool) {
 		return "Echo Digital Audio Corporation", true
 	case 0xedd8:
 		return "ARK Logic Inc", true
+	case 0xefab:
+		return "Enfabrica", true
 	case 0xf043:
 		return "ASUSTeK Computer Inc. (Wrong ID)", true
 	case 0xf05b:
@@ -5422,6 +5460,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "GP201", true
 	case 0x07090202:
 		return "GP202", true
+	case 0x07311100:
+		return "JM1100", true
 	case 0x07317200:
 		return "JM7200 Series GPU", true
 	case 0x07319100:
@@ -5450,6 +5490,12 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "JH930-I", true
 	case 0x0731930b:
 		return "JH930-M", true
+	case 0x0731f011:
+		return "JM1100-IV", true
+	case 0x0731f111:
+		return "JM1100-MV", true
+	case 0x0731ff11:
+		return "JM1100-YV", true
 	case 0x07956663:
 		return "Butane II (MPEG2 encoder board)", true
 	case 0x07956666:
@@ -6097,13 +6143,13 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x10021636:
 		return "Renoir [Radeon Vega Series / Radeon Vega Mobile Series]", true
 	case 0x10021637:
-		return "Renoir Radeon High Definition Audio Controller", true
+		return "Renoir/Cezanne HDMI/DP Audio Controller", true
 	case 0x10021638:
 		return "Cezanne [Radeon Vega Series / Radeon Vega Mobile Series]", true
 	case 0x1002163f:
 		return "VanGogh [AMD Custom GPU 0405]", true
 	case 0x10021640:
-		return "Rembrandt Radeon High Definition Audio Controller", true
+		return "Radeon High Definition Audio Controller [Rembrandt/Strix]", true
 	case 0x1002164c:
 		return "Lucienne", true
 	case 0x1002164d:
@@ -6117,9 +6163,11 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x10021714:
 		return "BeaverCreek HDMI Audio [Radeon HD 6500D and 6400G-6600G series]", true
 	case 0x10021900:
-		return "Phoenix3", true
+		return "HawkPoint1", true
 	case 0x10021901:
-		return "Phoenix4", true
+		return "HawkPoint2", true
+	case 0x10021902:
+		return "Krackan2", true
 	case 0x10023150:
 		return "RV380/M24 [Mobility Radeon X600]", true
 	case 0x10023151:
@@ -7660,6 +7708,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Navi 33 [Radeon Graphics]", true
 	case 0x10027499:
 		return "Navi 33 [Radeon RX 7400/7300/Pro W7400]", true
+	case 0x1002749f:
+		return "Navi 33 [Radeon RX 7500]", true
 	case 0x100274a0:
 		return "Aqua Vanjaram [Instinct MI300A]", true
 	case 0x100274a1:
@@ -7672,10 +7722,16 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Aqua Vanjaram [Instinct MI300X HF]", true
 	case 0x100274b5:
 		return "Aqua Vanjaram [Instinct MI300X VF]", true
+	case 0x100274b9:
+		return "Aqua Vanjaram [Instinct MI325X VF]", true
 	case 0x100274bd:
 		return "Aqua Vanjaram [Instinct MI300X HF]", true
 	case 0x10027550:
-		return "Navi 48 [RX 9070/9070 XT]", true
+		return "Navi 48 [Radeon RX 9070/9070 XT/9070 GRE]", true
+	case 0x10027551:
+		return "Navi 48 [Radeon AI PRO R9700]", true
+	case 0x10027590:
+		return "Navi 44 [Radeon RX 9060 XT]", true
 	case 0x10027833:
 		return "RS350 Host Bridge", true
 	case 0x10027834:
@@ -8214,6 +8270,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Navi 31 HDMI/DP Audio", true
 	case 0x1002ab38:
 		return "Navi 10 HDMI Audio", true
+	case 0x1002ab40:
+		return "Navi 48 HDMI/DP Audio Controller", true
 	case 0x1002ac00:
 		return "Theater 506 World-Wide Analog Decoder", true
 	case 0x1002ac01:
@@ -8676,6 +8734,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Internal Shared Memory (ISM) virtual PCI device", true
 	case 0x10140611:
 		return "4769 Cryptographic Adapter", true
+	case 0x101406a2:
+		return "4770 Cryptographic Adapter", true
 	case 0x101406a7:
 		return "Spyre Accelerator", true
 	case 0x101406a8:
@@ -9268,6 +9328,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Family 14h Processor Root Port", true
 	case 0x10221516:
 		return "Family 14h Processor Root Port", true
+	case 0x1022151c:
+		return "USB4 Router 0", true
+	case 0x1022151d:
+		return "USB4 Router 1", true
 	case 0x10221530:
 		return "Family 16h Processor Function 0", true
 	case 0x10221531:
@@ -9400,6 +9464,18 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Family 16h (Models 30h-3fh) Processor Function 4", true
 	case 0x10221585:
 		return "Family 16h (Models 30h-3fh) Processor Function 5", true
+	case 0x10221587:
+		return "Strix Halo USB 3.1 xHCI", true
+	case 0x10221588:
+		return "Strix Halo USB 3.1 xHCI", true
+	case 0x10221589:
+		return "Strix Halo USB 3.1 xHCI", true
+	case 0x1022158b:
+		return "Strix Halo USB 3.1 xHCI", true
+	case 0x1022158d:
+		return "Strix Halo USB4 Host Router", true
+	case 0x1022158e:
+		return "Strix Halo USB4 Host Router", true
 	case 0x10221590:
 		return "Amur/Nolan HT Configuration", true
 	case 0x10221591:
@@ -9475,13 +9551,13 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x102215de:
 		return "Raven/Raven2/FireFlight HD Audio Controller", true
 	case 0x102215df:
-		return "Family 17h (Models 10h-1fh) Platform Security Processor", true
+		return "Raven/Raven2/FireFlight/Renoir/Cezanne Platform Security Processor", true
 	case 0x102215e0:
 		return "Raven USB 3.1", true
 	case 0x102215e1:
 		return "Raven USB 3.1", true
 	case 0x102215e2:
-		return "ACP/ACP3X/ACP6x Audio Coprocessor", true
+		return "Audio Coprocessor", true
 	case 0x102215e3:
 		return "Family 17h/19h/1ah HD Audio Controller", true
 	case 0x102215e4:
@@ -9862,8 +9938,12 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "400 Series Chipset USB 3.1 xHCI Compliant Host Controller", true
 	case 0x102243e9:
 		return "500 Series Chipset Switch Upstream Port", true
+	case 0x102243ea:
+		return "500 Series Chipset Switch Downstream Port", true
 	case 0x102243eb:
 		return "500 Series Chipset SATA Controller", true
+	case 0x102243ec:
+		return "A520 Series Chipset USB 3.1 XHCI Controller", true
 	case 0x102243ee:
 		return "500 Series Chipset USB 3.1 XHCI Controller", true
 	case 0x102243f4:
@@ -9874,6 +9954,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "600 Series Chipset SATA Controller", true
 	case 0x102243f7:
 		return "600 Series Chipset USB 3.2 Controller", true
+	case 0x102243fc:
+		return "800 Series Chipset USB 3.x XHCI Controller", true
 	case 0x102243fd:
 		return "800 Series Chipset USB 3.x XHCI Controller", true
 	case 0x102257a3:
@@ -10300,6 +10382,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "PowerEdge Expandable RAID controller S300", true
 	case 0x10280073:
 		return "NV-RAM Adapter", true
+	case 0x10280c46:
+		return "PERC S160 RAID controller", true
 	case 0x10281028:
 		return "PCIe Bridge riser", true
 	case 0x10282600:
@@ -11232,6 +11316,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "CXD1947Q i.LINK Controller", true
 	case 0x104d800c:
 		return "DTL-H800 [PS1 sound development board]", true
+	case 0x104d800d:
+		return "DVBK-2000(E) DV Still Image Capture Board", true
 	case 0x104d8039:
 		return "CXD3222 i.LINK Controller", true
 	case 0x104d8047:
@@ -11916,6 +12002,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "ISP2532-based 8Gb Fibre Channel to PCI Express HBA", true
 	case 0x10772971:
 		return "ISP2684", true
+	case 0x10772981:
+		return "32G SFP28 EP2744 Apatter", true
 	case 0x10773022:
 		return "ISP4022-based Ethernet NIC", true
 	case 0x10773032:
@@ -13776,16 +13864,22 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "PEX 8680 80-lane, 20-Port PCI Express Gen 2 (5.0 GT/s) Multi-Root Switch", true
 	case 0x10b58696:
 		return "PEX 8696 96-lane, 24-Port PCI Express Gen 2 (5.0 GT/s) Multi-Root Switch", true
+	case 0x10b58714:
+		return "PEX 8714 12-Lane, 5-Port PCI Express Gen 3 (8 GT/s) Switch", true
 	case 0x10b58717:
 		return "PEX 8717 16-lane, 8-Port PCI Express Gen 3 (8.0 GT/s) Switch with DMA", true
 	case 0x10b58718:
 		return "PEX 8718 16-Lane, 5-Port PCI Express Gen 3 (8.0 GT/s) Switch", true
+	case 0x10b58723:
+		return "PEX 8723 24-Lane, 6-Port PCI Express Gen 3 (8 GT/s) Switch", true
 	case 0x10b58724:
 		return "PEX 8724 24-Lane, 6-Port PCI Express Gen 3 (8 GT/s) Switch, 19 x 19mm FCBGA", true
 	case 0x10b58725:
 		return "PEX 8725 24-Lane, 10-Port PCI Express Gen 3 (8.0 GT/s) Multi-Root Switch with DMA", true
 	case 0x10b58732:
 		return "PEX 8732 32-lane, 8-Port PCI Express Gen 3 (8.0 GT/s) Switch", true
+	case 0x10b58733:
+		return "PEX 8733 32-Lane, 19-Port PCI Express Gen 3 (8 GT/s) Switch", true
 	case 0x10b58734:
 		return "PEX 8734 32-lane, 8-Port PCI Express Gen 3 (8.0GT/s) Switch", true
 	case 0x10b58747:
@@ -13794,6 +13888,12 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "PEX 8748 48-Lane, 12-Port PCI Express Gen 3 (8 GT/s) Switch, 27 x 27mm FCBGA", true
 	case 0x10b58749:
 		return "PEX 8749 48-Lane, 18-Port PCI Express Gen 3 (8.0 GT/s) Multi-Root Switch with DMA", true
+	case 0x10b58764:
+		return "PEX 8764 64-Lane, 16-Port PCI Express Gen 3 (8 GT/s) Switch", true
+	case 0x10b58780:
+		return "PEX 8780 80-Lane, 20-Port PCI Express Gen 3 (8 GT/s) Switch", true
+	case 0x10b58796:
+		return "PEX8796 96-Lane, 24-Port PCIe Gen 3 (8.0 GT/s) Switch", true
 	case 0x10b587a0:
 		return "PEX PCI Express Switch NT0 Port Link Interface", true
 	case 0x10b587a1:
@@ -13828,10 +13928,18 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "PCI9080 32-bit; 33MHz PCI <-> IOBus Bridge", true
 	case 0x10b59656:
 		return "PCI9656 PCI <-> IOBus Bridge", true
+	case 0x10b59712:
+		return "PEX9712 12-Lane, 5-Port PCIe Gen 3 (8.0 GT/s) ExpressFabric Switch", true
 	case 0x10b59733:
 		return "PEX 9733 33-lane, 9-port PCI Express Gen 3 (8.0 GT/s) Switch", true
 	case 0x10b59749:
 		return "PEX 9749 49-lane, 13-port PCI Express Gen 3 (8.0 GT/s) Switch", true
+	case 0x10b59765:
+		return "PEX9765 65-Lane, 17-Port PCIe Gen 3 (8.0 GT/s) ExpressFabric Switch", true
+	case 0x10b59781:
+		return "PEX9781 81-Lane, 21-Port PCIe Gen 3 (8.0 GT/s) ExpressFabric Switch", true
+	case 0x10b59797:
+		return "PEX9781 97-Lane, 25-Port PCIe Gen 3 (8.0 GT/s) ExpressFabric Switch", true
 	case 0x10b5a100:
 		return "Blackmagic Design DeckLink", true
 	case 0x10b5bb04:
@@ -16338,6 +16446,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "GK11x", true
 	case 0x10de0fa7:
 		return "GK11x [Tegra on x86 (PEATRANS)]", true
+	case 0x10de0fae:
+		return "Tegra X1 PCIe x4 Root Complex", true
+	case 0x10de0faf:
+		return "Tegra X1 PCIe x1 Root Complex", true
 	case 0x10de0fb0:
 		return "GM200 High Definition Audio", true
 	case 0x10de0fb8:
@@ -16602,6 +16714,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "GT218 [GeForce 405]", true
 	case 0x10de10d8:
 		return "GT218 [NVS 300]", true
+	case 0x10de10e5:
+		return "Parker PCIe x4 Root Complex", true
+	case 0x10de10e6:
+		return "Parker PCIe x1 Root Complex", true
 	case 0x10de10ef:
 		return "GP102 HDMI Audio Controller", true
 	case 0x10de10f0:
@@ -17097,7 +17213,7 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x10de1af1:
 		return "GA100 [A100 NVSwitch]", true
 	case 0x10de1b00:
-		return "GP102 [TITAN X]", true
+		return "GP102 [TITAN X Pascal]", true
 	case 0x10de1b01:
 		return "GP102 [GeForce GTX 1080 Ti 10GB]", true
 	case 0x10de1b02:
@@ -17656,6 +17772,12 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "GA107 High Definition Audio Controller", true
 	case 0x10de2296:
 		return "Tegra PCIe Endpoint Virtual Network", true
+	case 0x10de229a:
+		return "Orin PCIe x8 Root Complex", true
+	case 0x10de229c:
+		return "Orin PCIe x4/x8 Endpoint/Root Complex", true
+	case 0x10de229e:
+		return "Orin PCIe x1 Root Complex", true
 	case 0x10de22a3:
 		return "GH100 [H100 NVSwitch]", true
 	case 0x10de22ba:
@@ -17666,6 +17788,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "AD106M High Definition Audio Controller", true
 	case 0x10de22be:
 		return "AD107 High Definition Audio Controller", true
+	case 0x10de22d8:
+		return "THOR Processor PCI Express Root Port", true
+	case 0x10de22e6:
+		return "THOR Processor PCI Express x16 Controller", true
 	case 0x10de2302:
 		return "GH100", true
 	case 0x10de230e:
@@ -18033,21 +18159,41 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x10de2901:
 		return "GB100 [B200]", true
 	case 0x10de2920:
-		return "GB100 [TS4]", true
+		return "GB100 [TS4 / B100]", true
+	case 0x10de2924:
+		return "GB100", true
+	case 0x10de2925:
+		return "GB100", true
+	case 0x10de293d:
+		return "GB100", true
 	case 0x10de2940:
 		return "GB100 [Reserved Dev ID B]", true
 	case 0x10de2941:
 		return "GB100 [HGX GB200]", true
+	case 0x10de297e:
+		return "GB100", true
 	case 0x10de2980:
 		return "GB102 [Reserved Dev ID A]", true
 	case 0x10de29bc:
 		return "GB102 [B100]", true
 	case 0x10de29c0:
 		return "GB102 [Reserved Dev ID B]", true
+	case 0x10de29f1:
+		return "GB102", true
+	case 0x10de2b00:
+		return "TA1090SA [THOR]", true
 	case 0x10de2b85:
 		return "GB202 [GeForce RTX 5090]", true
 	case 0x10de2b87:
 		return "GB202 [GeForce RTX 5090 D]", true
+	case 0x10de2bb1:
+		return "GB202GL [RTX PRO 6000 Blackwell Workstation Edition]", true
+	case 0x10de2bb3:
+		return "GB202GL [RTX PRO 5000 Blackwell]", true
+	case 0x10de2bb4:
+		return "GB202GL [RTX PRO 6000 Blackwell Max-Q Workstation Edition]", true
+	case 0x10de2bb5:
+		return "GB202GL [RTX PRO 6000 Blackwell Server Edition]", true
 	case 0x10de2c02:
 		return "GB203 [GeForce RTX 5080]", true
 	case 0x10de2c05:
@@ -18058,30 +18204,54 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "GB203M / GN22 [GeForce RTX 5080 Max-Q / Mobile]", true
 	case 0x10de2c2c:
 		return "GB6-256(N22W-ES-A1)", true
+	case 0x10de2c31:
+		return "GB203GL [RTX PRO 4500 Blackwell]", true
+	case 0x10de2c34:
+		return "GB203GL [RTX PRO 4000 Blackwell]", true
+	case 0x10de2c38:
+		return "GB203GLM [RTX PRO 5000 Blackwell Generation Laptop GPU]", true
+	case 0x10de2c39:
+		return "GB203GLM [RTX PRO 4000 Blackwell Generation Laptop GPU]", true
 	case 0x10de2c58:
 		return "GB203M / GN22-X11 [GeForce RTX 5090 Max-Q / Mobile]", true
 	case 0x10de2c59:
 		return "GB203M / GN22-X9 [GeForce RTX 5080 Max-Q / Mobile]", true
+	case 0x10de2d04:
+		return "GB206 [GeForce RTX 5060 Ti]", true
+	case 0x10de2d05:
+		return "GB206 [GeForce RTX 5060]", true
 	case 0x10de2d18:
-		return "AD108M [GeForce RTX 5070 Max-Q / Mobile]", true
+		return "GB206M [GeForce RTX 5070 Max-Q / Mobile]", true
 	case 0x10de2d19:
-		return "AD108M [GeForce RTX 5060 Max-Q / Mobile]", true
+		return "GB206M [GeForce RTX 5060 Max-Q / Mobile]", true
 	case 0x10de2d2c:
 		return "GB6-128 (N22Y-ES-A1)", true
+	case 0x10de2d39:
+		return "GB206GLM [RTX PRO 2000 Blackwell Generation Laptop GPU]", true
 	case 0x10de2d58:
-		return "AD108M [GeForce RTX 5070 Max-Q / Mobile]", true
+		return "GB206M [GeForce RTX 5070 Max-Q / Mobile]", true
 	case 0x10de2d59:
-		return "AD108M [GeForce RTX 5060 Max-Q / Mobile]", true
+		return "GB206M [GeForce RTX 5060 Max-Q / Mobile]", true
+	case 0x10de2d83:
+		return "GB207 [GeForce RTX 5050]", true
 	case 0x10de2d98:
-		return "AD108M [GeForce RTX 5050 Max-Q / Mobile]", true
+		return "GB207M [GeForce RTX 5050 Max-Q / Mobile]", true
+	case 0x10de2db8:
+		return "GB207GLM [RTX PRO 1000 Blackwell Generation Laptop GPU]", true
+	case 0x10de2db9:
+		return "GB207GLM [RTX PRO 500 Blackwell Generation Laptop GPU]", true
 	case 0x10de2dd8:
-		return "AD108M [GeForce RTX 5050 Max-Q / Mobile]", true
+		return "GB207M [GeForce RTX 5050 Max-Q / Mobile]", true
+	case 0x10de2e2a:
+		return "GB20B", true
 	case 0x10de2f04:
-		return "GN22 [GeForce RTX 5070]", true
+		return "GB205 [GeForce RTX 5070]", true
 	case 0x10de2f18:
-		return "AD108M [GeForce RTX 5070 Ti Max-Q / Mobile]", true
+		return "GB205M [GeForce RTX 5070 Ti Mobile]", true
+	case 0x10de2f38:
+		return "GB205GLM [RTX PRO 3000 Blackwell Generation Laptop GPU]", true
 	case 0x10de2f58:
-		return "AD108M [GeForce RTX 5070 Ti Max-Q / Mobile]", true
+		return "GB205M [GeForce RTX 5070 Ti Mobile]", true
 	case 0x10de31c0:
 		return "GB110", true
 	case 0x10de3340:
@@ -18242,6 +18412,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "CA91C862A [QSpan-II]", true
 	case 0x10e38111:
 		return "Tsi381 PCIe to PCI Bridge", true
+	case 0x10e38113:
+		return "89HPEB383 PCIe-to-PCI Bridge", true
 	case 0x10e38260:
 		return "CA91L8200B [Dual PCI PowerSpan II]", true
 	case 0x10e38261:
@@ -18356,6 +18528,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "RTS5209 PCI Express Card Reader", true
 	case 0x10ec5227:
 		return "RTS5227 PCI Express Card Reader", true
+	case 0x10ec5228:
+		return "RTS5288 PCIe SD UHS-I Card Reader controller", true
 	case 0x10ec5229:
 		return "RTS5229 PCI Express Card Reader", true
 	case 0x10ec522a:
@@ -18371,7 +18545,9 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x10ec5260:
 		return "RTS5260 PCI Express Card Reader", true
 	case 0x10ec5261:
-		return "RTS5261 PCI Express Card Reader", true
+		return "RTS5261 PCIe SD Express Card Reader controller", true
+	case 0x10ec5264:
+		return "RTS5264 PCIe SD UHS-II & SD Express Card Reader controller", true
 	case 0x10ec5286:
 		return "RTS5286 PCI Express Card Reader", true
 	case 0x10ec5287:
@@ -18390,6 +18566,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "RTS5765DL NVMe SSD Controller (DRAM-less)", true
 	case 0x10ec5770:
 		return "RTS5770DL NVMe SSD Controller (DRAM-less)", true
+	case 0x10ec5771:
+		return "RTS5771 NVMe SSD Controller (DRAM-less)", true
 	case 0x10ec5772:
 		return "RTS5772DL NVMe SSD Controller (DRAM-less)", true
 	case 0x10ec8029:
@@ -18484,6 +18662,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "RTL8821CE PCIe 802.11ac Wireless Network Controller", true
 	case 0x10ecb822:
 		return "RTL8822BE 802.11a/b/g/n/ac WiFi adapter", true
+	case 0x10ecb851:
+		return "RTL8851BE PCIe 802.11ax Wireless Network Controller", true
 	case 0x10ecb852:
 		return "RTL8852BE PCIe 802.11ax Wireless Network Controller", true
 	case 0x10ecb85b:
@@ -18638,6 +18818,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "CA0110 [Sound Blaster X-Fi Xtreme Audio]", true
 	case 0x1102000b:
 		return "EMU20k2 [Sound Blaster X-Fi Titanium Series]", true
+	case 0x11020010:
+		return "CA0132 Sound Core3D [Sound Blaster AE-7]", true
 	case 0x11020012:
 		return "CA0132 Sound Core3D [Sound Blaster Recon3D / Z-Series / Sound BlasterX AE-5 Plus]", true
 	case 0x11024001:
@@ -18845,7 +19027,7 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x11060586:
 		return "VT82C586/A/B PCI-to-ISA [Apollo VP]", true
 	case 0x11060591:
-		return "VT8237A SATA 2-Port Controller", true
+		return "VT8237A Integrated SATA RAID Controller", true
 	case 0x11060595:
 		return "VT82C595 [Apollo VP2]", true
 	case 0x11060596:
@@ -19174,6 +19356,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "VT8237A PCI to PCI Bridge", true
 	case 0x1106337b:
 		return "VT8237A Host Bridge", true
+	case 0x11063401:
+		return "VT6325 Firewire Controller", true
 	case 0x11063402:
 		return "VT8261 PCI to ISA Bridge", true
 	case 0x11063403:
@@ -19192,8 +19376,16 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "VX11 Miscellaneous Bus", true
 	case 0x11063483:
 		return "VL805/806 xHCI USB 3.0 Controller", true
+	case 0x1106365a:
+		return "VT3365 Card Reader Host Controller", true
+	case 0x1106365b:
+		return "VT3365 SDIO Host Controller", true
 	case 0x11063a01:
 		return "VX11 Graphics [Chrome 645/640]", true
+	case 0x1106401a:
+		return "VT6325 Card Reader Host Controller", true
+	case 0x1106401b:
+		return "VT6325 SDIO PCI-E Host Controller", true
 	case 0x11064149:
 		return "VIA VT6420 (ATA133) Controller", true
 	case 0x11064204:
@@ -19260,6 +19452,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "P4M890 I/O APIC Interrupt Controller", true
 	case 0x11065336:
 		return "K8M890CE I/O APIC Interrupt Controller", true
+	case 0x11065337:
+		return "VT8237A Integrated SATA Controller", true
 	case 0x11065340:
 		return "PT900 I/O APIC Interrupt Controller", true
 	case 0x11065351:
@@ -19269,7 +19463,7 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x11065364:
 		return "CN896/VN896/P4M900 I/O APIC Interrupt Controller", true
 	case 0x11065372:
-		return "VT8237/8251 Serial ATA Controller", true
+		return "VT8237S SATA Controller", true
 	case 0x11065409:
 		return "VX855/VX875 APIC and Central Traffic Control", true
 	case 0x11065410:
@@ -19281,7 +19475,7 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x11066122:
 		return "VN1000 Graphics [Chrome 520 IGP]", true
 	case 0x11066287:
-		return "SATA RAID Controller", true
+		return "VT8251 AHCI SATA Controller", true
 	case 0x11066290:
 		return "K8M890CE Host Bridge", true
 	case 0x11066327:
@@ -19338,6 +19532,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "VX800/VX820 North-South Module Interface Control", true
 	case 0x11067364:
 		return "CN896/VN896/P4M900 Host Bridge", true
+	case 0x11067372:
+		return "VT8237S SATA RAID Controller", true
 	case 0x11067409:
 		return "VX855/VX875 North-South Module Interface Control", true
 	case 0x11067410:
@@ -19394,10 +19590,14 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "VX900 Series Serial-ATA Controller", true
 	case 0x11069040:
 		return "VT8261 SATA Controller [StorX RAID Controller - 9040]", true
+	case 0x11069041:
+		return "VX900/VX11 SATA Controller [StorX RAID Controller - 9041]", true
 	case 0x11069082:
 		return "Standard AHCI 1.0 SATA Controller", true
 	case 0x11069140:
-		return "HDMI Audio Device", true
+		return "VX11 Graphics [Chrome 645/640] HDMI Audio Device", true
+	case 0x11069170:
+		return "VX900 Graphics [Chrome9 HD] HDMI Audio Device", true
 	case 0x11069201:
 		return "USB3.0 Controller", true
 	case 0x11069380:
@@ -20524,6 +20724,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "XG4 NVMe SSD Controller", true
 	case 0x11790116:
 		return "XG5 NVMe SSD Controller", true
+	case 0x11790119:
+		return "XD5 NVMe SSD Controller", true
 	case 0x1179011a:
 		return "XG6 NVMe SSD Controller", true
 	case 0x11790404:
@@ -21034,6 +21236,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "SSA Controller", true
 	case 0x11bc0001:
 		return "NP-PCI", true
+	case 0x11bd0015:
+		return "FireWire Controller", true
+	case 0x11bd0023:
+		return "Studio 700", true
 	case 0x11bd002e:
 		return "PCTV 40i", true
 	case 0x11bd0040:
@@ -21284,6 +21490,14 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "ReadyLink 100TX (Winbond W89C840)", true
 	case 0x11f69881:
 		return "RL100TX Fast Ethernet", true
+	case 0x11f84036:
+		return "PM40036 Switchtec PFX 36xG4 Fanout PCIe Switch", true
+	case 0x11f84052:
+		return "PM40052 Switchtec PFX 52xG4 Fanout PCIe Switch", true
+	case 0x11f84084:
+		return "PM40084 Switchtec PFX 84xG4 Fanout PCIe Switch", true
+	case 0x11f84128:
+		return "PM41028 Switchtec PSX 28xG4 Programmable PCIe Switch", true
 	case 0x11f85000:
 		return "PM50100 Switchtec PFX 100xG5 Fanout PCIe Switch", true
 	case 0x11f85028:
@@ -21680,6 +21894,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "LightParser 2", true
 	case 0x12310d13:
 		return "Desktop PCI L1/L3 Telephony", true
+	case 0x1235c241:
+		return "CXA-4F1W", true
 	case 0x12360000:
 		return "RealMagic64/GX", true
 	case 0x12366401:
@@ -21886,6 +22102,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "SM2262/SM2262EN SSD Controller", true
 	case 0x126f2263:
 		return "SM2263EN/SM2263XT (DRAM-less) NVMe SSD Controllers", true
+	case 0x126f2268:
+		return "SM2268XT (DRAM-less) NVMe SSD Controller", true
 	case 0x126f2269:
 		return "SM2269XT (DRAM-less) NVMe SSD Controller", true
 	case 0x126f8366:
@@ -22654,6 +22872,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "2500 NVMe SSD (DRAM-less)", true
 	case 0x13445427:
 		return "2650 NVMe SSD (DRAM-less)", true
+	case 0x13445428:
+		return "4600 NVMe SSD", true
 	case 0x13445429:
 		return "2600 NVMe SSD (DRAM-less)", true
 	case 0x13446001:
@@ -22762,6 +22982,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "UP-200 Powered 2 port RS-232 card", true
 	case 0x135a0ba1:
 		return "UC-101 1 + 1 port RS-232 card", true
+	case 0x135a0ba2:
+		return "UC-101 1 + 1 port RS-232 card", true
+	case 0x135a0ba3:
+		return "UC-101 1 + 1 port RS-232 card", true
 	case 0x135a0bc1:
 		return "UC-203 1 + 1 port RS-232 + LPT card", true
 	case 0x135a0bc2:
@@ -22783,6 +23007,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x135a0c23:
 		return "UP-880 Powered 2 port RS-232 card", true
 	case 0x135a0c41:
+		return "UC-368 4 port RS-422/485 Opto Isolated card", true
+	case 0x135a0c42:
+		return "UC-368 4 port RS-422/485 Opto Isolated card", true
+	case 0x135a0c43:
 		return "UC-368 4 port RS-422/485 Opto Isolated card", true
 	case 0x135a0ca1:
 		return "UC-253 2 port RS-232 card", true
@@ -22862,6 +23090,14 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "PX-803 Powered 1 + 1 port RS-232 card", true
 	case 0x135a401f:
 		return "PX-475 1 port RS-232 + LPT card (LPT port)", true
+	case 0x135a4020:
+		return "XC-157 LPT ExpressCard", true
+	case 0x135a4021:
+		return "XC-475 1 port RS-232 + LPT ExpressCard (Serial port)", true
+	case 0x135a4022:
+		return "XC-475 1 port RS-232 + LPT ExpressCard (LPT port)", true
+	case 0x135a4026:
+		return "XC-235 1 port RS-232 ExpressCard", true
 	case 0x135a4027:
 		return "IX-100 1 port RS-232 card", true
 	case 0x135a4028:
@@ -25364,6 +25600,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "NVMe SSD Controller PM9D3a", true
 	case 0x144da80f:
 		return "BM9C1 QLC NVME SSD (DRAM-less)", true
+	case 0x144da810:
+		return "NVMe SSD 9100 PRO [PM9E1]", true
+	case 0x144da811:
+		return "BM9H1 NVME SSD (DRAM-less)", true
 	case 0x144da820:
 		return "NVMe SSD Controller 171X", true
 	case 0x144da821:
@@ -25388,6 +25628,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Aourus Radeon RX6900XT Xtreme Waterforce WB 16G", true
 	case 0x145822e8:
 		return "Ellesmere [Radeon RX 480]", true
+	case 0x14582425:
+		return "Radeon RX 9070 GAMING OC 16G", true
 	case 0x14583483:
 		return "USB 3.0 Controller (VIA VL80x-based xHCI Controller)", true
 	case 0x145f0001:
@@ -25530,6 +25772,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "MT7921K (RZ608) Wi-Fi 6E 80MHz", true
 	case 0x14c30616:
 		return "MT7922 802.11ax PCI Express Wireless Network Adapter", true
+	case 0x14c30717:
+		return "MT7925 (RZ717) Wi-Fi 7 160MHz", true
 	case 0x14c34d75:
 		return "T700 5G Modem [5G Solution 5000]", true
 	case 0x14c37603:
@@ -26722,6 +26966,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Digital Programmable Resistor", true
 	case 0x15429320:
 		return "Arria 10 FPGA Card", true
+	case 0x15429330:
+		return "Cyclone V FPGA Card", true
 	case 0x15429350:
 		return "Analog Input Card", true
 	case 0x15433052:
@@ -27018,6 +27264,16 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Arcus3 Flash Recovery", true
 	case 0x15b30293:
 		return "Arcus3 RMA", true
+	case 0x15b30294:
+		return "Ophy 2.1 (SagittaZ)", true
+	case 0x15b30296:
+		return "OPHY2.6", true
+	case 0x15b30298:
+		return "OPHY3.0", true
+	case 0x15b3029a:
+		return "OPHY3.1", true
+	case 0x15b3029c:
+		return "OPHY3.5", true
 	case 0x15b302a0:
 		return "Quantum-6 in Flash Recovery Mode", true
 	case 0x15b302a1:
@@ -27351,7 +27607,7 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x15b75016:
 		return "WD PC SN740 NVMe SSD 512GB (DRAM-less)", true
 	case 0x15b75017:
-		return "WD Black SN770 / PC SN740 256GB / PC SN560 (DRAM-less) NVMe SSD", true
+		return "WD SN560/SN740/SN770/SN5000 NVMe SSD", true
 	case 0x15b75019:
 		return "WD Green SN350 240GB (DRAM-less) / SN560E NVMe SSD", true
 	case 0x15b7501a:
@@ -27372,18 +27628,26 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "WD Black SN850X NVMe SSD", true
 	case 0x15b75034:
 		return "WD PC SN5000S M.2 2230 NVMe SSD (DRAM-less)", true
+	case 0x15b75035:
+		return "WD PC SN5000S M.2 2242 NVMe SSD (DRAM-less)", true
 	case 0x15b75036:
 		return "WD PC SN5000S M.2 2280 NVMe SSD (DRAM-less)", true
 	case 0x15b75041:
 		return "WD Blue SN580 NVMe SSD (DRAM-less)", true
 	case 0x15b75042:
 		return "WD Black SN770M NVMe SSD (DRAM-less)", true
+	case 0x15b75044:
+		return "WD PC SN7100S NVMe SSD (DRAM-less)", true
 	case 0x15b75045:
 		return "WD_BLACK SN7100 NVMe SSD (DRAM-less)", true
 	case 0x15b75046:
 		return "SanDisk Extreme NVMe SSD (DRAM-less)", true
 	case 0x15b75049:
 		return "SN8000S NVMe SSD", true
+	case 0x15b7504a:
+		return "WD Blue SN5000 NVMe SSD (DRAM-less)", true
+	case 0x15b75050:
+		return "WD PC SN8050S / WD_BLACK SN8100 NVMe SSD", true
 	case 0x15b81001:
 		return "APCI1516 SP controller (16 digi outputs)", true
 	case 0x15b81003:
@@ -28710,6 +28974,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "SC8280XP PCI Express Root Port", true
 	case 0x17cb0110:
 		return "SM8475 PCIe Root Complex [Snapdragon 8+ Gen 1]", true
+	case 0x17cb0111:
+		return "SC8380XP PCIe Root Complex [Snapdragon X / X Plus / X Elite]", true
+	case 0x17cb0113:
+		return "SM8550/SM8650 PCIe Root Complex [Snapdragon 8 Gen 2/Gen 3]", true
 	case 0x17cb0300:
 		return "MDM9x35 LTE Modem [Snapdragon X7]", true
 	case 0x17cb0301:
@@ -28726,6 +28994,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Datacenter Technologies QDF2400 PCI Express Root Port", true
 	case 0x17cb1000:
 		return "QCS405 PCIe Root Complex", true
+	case 0x17cb1003:
+		return "IPQ6018 PCIe Root Complex", true
 	case 0x17cb1101:
 		return "QCA6390 Wireless Network Adapter", true
 	case 0x17cb1103:
@@ -29632,6 +29902,22 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "T4160 with security", true
 	case 0x19570447:
 		return "T4160 without security", true
+	case 0x19570820:
+		return "T1040 with security", true
+	case 0x19570821:
+		return "T1040 without security", true
+	case 0x19570824:
+		return "T1042 with security", true
+	case 0x19570825:
+		return "T1042 without security", true
+	case 0x19570828:
+		return "T1020 with security", true
+	case 0x19570829:
+		return "T1020 without security", true
+	case 0x1957082c:
+		return "T1022 with security", true
+	case 0x1957082d:
+		return "T1022 without security", true
 	case 0x19570830:
 		return "T2080 with security", true
 	case 0x19570831:
@@ -29966,6 +30252,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "HiSilicon SDI Accelerator", true
 	case 0x19e5a12a:
 		return "HiSilicon Add-on PCI-PCI Bridge", true
+	case 0x19e5a12d:
+		return "HiSilicon Embedded PMU", true
+	case 0x19e5a12e:
+		return "HiSilicon Embedded PCIe PTT", true
 	case 0x19e5a220:
 		return "HNS GE Network Controller", true
 	case 0x19e5a221:
@@ -30084,6 +30374,18 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Wave300 PSB8231 [Hyperion III]", true
 	case 0x1a3b1112:
 		return "AR9285 Wireless Network Adapter (PCI-Express)", true
+	case 0x1a3e132c:
+		return "MTCA Event Receiver 300", true
+	case 0x1a3e152c:
+		return "CompactPCI Event Receiver 300", true
+	case 0x1a3e172c:
+		return "PCI Express Event Receiver 300", true
+	case 0x1a3e192c:
+		return "CompactPCI Event Receiver TG 300", true
+	case 0x1a3e232c:
+		return "MTCA Event Master 300", true
+	case 0x1a3e252c:
+		return "CompactPCI Event Generator 300", true
 	case 0x1a410001:
 		return "TILE64 processor", true
 	case 0x1a410002:
@@ -30341,23 +30643,75 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x1af41044:
 		return "Virtio 1.0 RNG", true
 	case 0x1af41045:
-		return "Virtio 1.0 memory balloon", true
+		return "Virtio 1.0 balloon", true
+	case 0x1af41046:
+		return "Virtio 1.0 ioMemory", true
+	case 0x1af41047:
+		return "Virtio 1.0 remote processor messaging", true
 	case 0x1af41048:
 		return "Virtio 1.0 SCSI", true
 	case 0x1af41049:
-		return "Virtio 1.0 filesystem", true
+		return "Virtio 9P transport", true
+	case 0x1af4104a:
+		return "Virtio 1.0 WLAN MAC", true
+	case 0x1af4104b:
+		return "Virtio 1.0 remoteproc serial link", true
+	case 0x1af4104d:
+		return "Virtio 1.0 memory balloon", true
 	case 0x1af41050:
 		return "Virtio 1.0 GPU", true
+	case 0x1af41051:
+		return "Virtio 1.0 clock/timer", true
 	case 0x1af41052:
 		return "Virtio 1.0 input", true
 	case 0x1af41053:
 		return "Virtio 1.0 socket", true
+	case 0x1af41054:
+		return "Virtio 1.0 crypto", true
+	case 0x1af41055:
+		return "Virtio 1.0 signal distribution device", true
+	case 0x1af41056:
+		return "Virtio 1.0 pstore device", true
+	case 0x1af41057:
+		return "Virtio 1.0 IOMMU", true
 	case 0x1af41058:
-		return "virtio-mem", true
+		return "Virtio 1.0 mem", true
+	case 0x1af41059:
+		return "Virtio 1.0 sound", true
 	case 0x1af4105a:
-		return "Virtio file system", true
+		return "Virtio 1.0 file system", true
+	case 0x1af4105b:
+		return "Virtio 1.0 pmem", true
+	case 0x1af4105c:
+		return "Virtio 1.0 rpmb", true
+	case 0x1af4105d:
+		return "Virtio 1.0 mac80211-hwsim", true
+	case 0x1af4105e:
+		return "Virtio 1.0 video encoder", true
+	case 0x1af4105f:
+		return "Virtio 1.0 video decoder", true
+	case 0x1af41060:
+		return "Virtio 1.0 SCMI", true
+	case 0x1af41061:
+		return "Virtio 1.0 nitro secure module", true
+	case 0x1af41062:
+		return "Virtio 1.0 I2C adapter", true
+	case 0x1af41063:
+		return "Virtio 1.0 watchdog", true
+	case 0x1af41064:
+		return "Virtio 1.0 can", true
+	case 0x1af41065:
+		return "Virtio 1.0 dmabuf", true
+	case 0x1af41066:
+		return "Virtio 1.0 parameter server", true
+	case 0x1af41067:
+		return "Virtio 1.0 audio policy", true
+	case 0x1af41068:
+		return "Virtio 1.0 Bluetooth", true
+	case 0x1af41069:
+		return "Virtio 1.0 GPIO", true
 	case 0x1af41110:
-		return "Inter-VM shared memory", true
+		return "QEMU Inter-VM shared memory device", true
 	case 0x1b00c001:
 		return "CXL Memory Expander Controller M88MX5891", true
 	case 0x1b036100:
@@ -30482,6 +30836,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "QEMU PCIe Root port", true
 	case 0x1b36000d:
 		return "QEMU XHCI Host Controller", true
+	case 0x1b36000e:
+		return "QEMU PCIe-to-PCI bridge", true
 	case 0x1b360010:
 		return "QEMU NVM Express Controller", true
 	case 0x1b360011:
@@ -30550,6 +30906,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "NXP 88W9098 Bluetooth 5.3", true
 	case 0x1b4b9120:
 		return "88SE9120 SATA 6Gb/s Controller", true
+	case 0x1b4b9122:
+		return "88SE912x SATA 6Gb/s Controller [AHCI mode]", true
 	case 0x1b4b9123:
 		return "88SE9123 PCIe SATA 6.0 Gb/s controller", true
 	case 0x1b4b9125:
@@ -30560,22 +30918,32 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "88SE9128 PCIe SATA 6 Gb/s RAID controller with HyperDuo", true
 	case 0x1b4b9170:
 		return "88SE9170 PCIe 2.0 x1 2-port SATA 6 Gb/s Controller", true
+	case 0x1b4b9171:
+		return "88SE9171 PCIe 2.0 x1 1-port SATA 6 Gb/s Controller", true
 	case 0x1b4b9172:
 		return "88SE9172 SATA 6Gb/s Controller", true
 	case 0x1b4b9178:
 		return "88SE9170 PCIe SATA 6Gb/s Controller", true
 	case 0x1b4b917a:
-		return "88SE9172 SATA III 6Gb/s RAID Controller", true
+		return "88SE9172 SATA III 6Gb/s Controller [IDE mode]", true
 	case 0x1b4b9182:
 		return "88SE9182 PCIe 2.0 x2 2-port SATA 6 Gb/s Controller", true
 	case 0x1b4b9183:
 		return "88SS9183 PCIe SSD Controller", true
+	case 0x1b4b9186:
+		return "88SE9186 6Gb/s SATA 6Gb/s Controller [AHCI mode]", true
+	case 0x1b4b918a:
+		return "88SE9182 PCIe SATA 6 Gb/s controller [IDE mode]", true
 	case 0x1b4b9192:
 		return "88SE9172 SATA III 6Gb/s RAID Controller", true
 	case 0x1b4b91a0:
 		return "88SE912x SATA 6Gb/s Controller [IDE mode]", true
+	case 0x1b4b91a3:
+		return "88SE9128 PCIe SATA 6 Gb/s controller [IDE mode]", true
 	case 0x1b4b91a4:
 		return "88SE912x IDE Controller", true
+	case 0x1b4b91b0:
+		return "88SE9172 SATA 6 Gb/s controller [IDE mode]", true
 	case 0x1b4b9215:
 		return "88SE9215 PCIe 2.0 x1 4-port SATA 6 Gb/s Controller", true
 	case 0x1b4b9220:
@@ -30642,6 +31010,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "FL1009 USB 3.0 Host Controller", true
 	case 0x1b731100:
 		return "FL1100 USB 3.0 Host Controller", true
+	case 0x1b731400:
+		return "USB 3.0 Host Controller", true
 	case 0x1b740115:
 		return "D115P/D115E Single-port E1/T1 card", true
 	case 0x1b74d130:
@@ -30732,6 +31102,12 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "FireCuda 520 SSD", true
 	case 0x1bb15026:
 		return "FireCuda 540 SSD", true
+	case 0x1bb15027:
+		return "LaCie Rugged SSD Pro5", true
+	case 0x1bb15100:
+		return "PCIe Gen3 SSD", true
+	case 0x1bb15101:
+		return "PCIe Gen5 SSD", true
 	case 0x1bb34304:
 		return "BC-04120A MPEG4 4 port video encoder / decoder", true
 	case 0x1bb34309:
@@ -30838,6 +31214,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "NS8500G2Uxxxx, NS8600G2Uxxxx NVME SSD", true
 	case 0x1bd4100f:
 		return "NS6500G2UXXXX,NS6600G2UXXXX NVME SSD", true
+	case 0x1bd42981:
+		return "32G SFP28 EP2744 Apatter", true
 	case 0x1bee0002:
 		return "CAN-IB100/PCIe", true
 	case 0x1bee0003:
@@ -30944,6 +31322,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "FD722 with bypass", true
 	case 0x1c1f0025:
 		return "FD922", true
+	case 0x1c1f0026:
+		return "FD788", true
+	case 0x1c1f0027:
+		return "FD940", true
 	case 0x1c280122:
 		return "M6e PCI Express SSD [Marvell 88SS9183]", true
 	case 0x1c2c000a:
@@ -31178,6 +31560,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "LEGEND 850 NVMe SSD (DRAM-less)", true
 	case 0x1cc1622a:
 		return "LEGEND 960 NVMe SSD", true
+	case 0x1cc1623a:
+		return "LEGEND 710 NVMe SSD (DRAM-less)", true
 	case 0x1cc1624a:
 		return "LEGEND 700, XPG GAMMIX S20 NVMe SSD (DRAM-less)", true
 	case 0x1cc1625a:
@@ -31186,8 +31570,14 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "LEGEND 800 NVMe SSD (DRAM-less)", true
 	case 0x1cc1628a:
 		return "LEGEND 800 NVMe SSD (DRAM-less)", true
+	case 0x1cc1631a:
+		return "LEGEND 970 NVMe SSD", true
 	case 0x1cc1633a:
 		return "LEGEND 900 NVMe SSD (DRAM-less)", true
+	case 0x1cc1634c:
+		return "LEGEND 820 NVMe SSD (DRAM-less)", true
+	case 0x1cc1635a:
+		return "XPG GAMMIX S60 NVMe SSD (DRAM-less)", true
 	case 0x1cc1642a:
 		return "XPG GAMMIX S50 CORE NVMe SSD (DRAM-less)", true
 	case 0x1cc18201:
@@ -31222,8 +31612,12 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "AM630 PCIe 4.0 x4 NVMe SSD Controller", true
 	case 0x1cc46304:
 		return "AM630 PCIe 4.0 NVMe SSD 1024GB", true
+	case 0x1cc4634c:
+		return "LEGEND 820 NVMe SSD (DRAM-less)", true
+	case 0x1cc4635a:
+		return "GAMMIX S60 NVMe SSD (DRAM-less)", true
 	case 0x1cc4660c:
-		return "RPETJ1T24MHP2QDQ PCIe 4.0 NVMe SSD 1024GB", true
+		return "AH660 PCIe 4.0 NVMe SSD", true
 	case 0x1cc46a01:
 		return "AM620 PCIe 3.0 NVMe SSD 128GB", true
 	case 0x1cc46a02:
@@ -31231,15 +31625,15 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x1cc46a03:
 		return "RPETJ512MKP1QDQ PCIe 4.0 NVMe SSD 512GB (DRAM-less)", true
 	case 0x1cc46a04:
-		return "RPETJ1T24MKP2QDQ PCIe 4.0 NVMe SSD 1024GB (DRAM-less)", true
+		return "AM6A0 PCIe 4.0 NVMe SSD 1024GB (DRAM-less)", true
 	case 0x1cc46a13:
 		return "RPJYJ512MKN1QWQ PCIe 4.0 NVMe SSD 512GB (DRAM-less)", true
 	case 0x1cc46a14:
-		return "RPEYJ1T24MKN2QWY PCIe 4.0 NVMe SSD 1024GB (DRAM-less)", true
+		return "AM6A1 PCIe 4.0 NVMe SSD 1024GB (DRAM-less)", true
 	case 0x1cc46b04:
 		return "AM6B0 PCIe 4.0 NVMe SSD", true
 	case 0x1cc46b13:
-		return "RPJYJ512MLR1QWY PCIe 4.0 NVMe SSD 512GB (DRAM-less)", true
+		return "AM6B1 PCIe 4.0 NVMe SSD 512GB (DRAM-less)", true
 	case 0x1cc46b14:
 		return "RPJYJ1T24MLR1HWY PCIe 4.0 NVMe SSD 1024GB (DRAM-less)", true
 	case 0x1cc48030:
@@ -31278,6 +31672,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Pro Capture Endpoint", true
 	case 0x1cd70014:
 		return "PRO CAPTURE AIO 4K PLUS", true
+	case 0x1cd70015:
+		return "Pro Capture HDMI 4K +", true
 	case 0x1cd70017:
 		return "PRO CAPTURE AIO 4K", true
 	case 0x1cd70051:
@@ -31314,6 +31710,104 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "ExaNIC V9P-3", true
 	case 0x1ce40100:
 		return "ExaDISK FX1", true
+	case 0x1cf28036:
+		return "DH Switch", true
+	case 0x1cf28040:
+		return "NEO X510 SRIOV PF Ethernet Controller", true
+	case 0x1cf28041:
+		return "NEO X510 SRIOV VF Ethernet Controller Virtual Function", true
+	case 0x1cf28042:
+		return "NX I512 VDPA VF Ethernet Controller Virtual Function", true
+	case 0x1cf28044:
+		return "NEO X510 MPF Ethernet Controller", true
+	case 0x1cf28045:
+		return "NX I512 BOND PF Ethernet Controller", true
+	case 0x1cf28046:
+		return "NX I512 OVS PF Ethernet Controller", true
+	case 0x1cf28047:
+		return "NEO X510 BOND PF Ethernet Controller", true
+	case 0x1cf28048:
+		return "NEO X510 OVS PF Ethernet Controller", true
+	case 0x1cf28049:
+		return "NX E312 SRIOV RDMA PF Ethernet Controller", true
+	case 0x1cf2804a:
+		return "NEO X512 NOF PF Ethernet Controller", true
+	case 0x1cf2804b:
+		return "NEO X512 SRIOV PF Ethernet Controller", true
+	case 0x1cf2804c:
+		return "NEO X512 INITIATOR1 PF Ethernet Controller", true
+	case 0x1cf2804d:
+		return "NEO X512 INITIATOR2 PF Ethernet Controller", true
+	case 0x1cf2804e:
+		return "NX I512 UPF PF Ethernet Controller", true
+	case 0x1cf2804f:
+		return "NX I512 UPF VF Ethernet Controller Virtual Function", true
+	case 0x1cf28060:
+		return "NX E312 SRIOV RDMA VF Ethernet Controller Virtual Function", true
+	case 0x1cf28061:
+		return "NX E310 SRIOV PF Ethernet Controller", true
+	case 0x1cf28062:
+		return "NX E310 SRIOV VF Ethernet Controller Virtual Function", true
+	case 0x1cf28063:
+		return "NX I510 BOND PF Ethernet Controller", true
+	case 0x1cf28064:
+		return "NX I510 OVS PF Ethernet Controller", true
+	case 0x1cf28065:
+		return "NX I510 VDPA VF Ethernet Controller Virtual Function", true
+	case 0x1cf28066:
+		return "NX I511 SRIOV PF Ethernet Controller", true
+	case 0x1cf28067:
+		return "NX I511 OVS PF Ethernet Controller", true
+	case 0x1cf28068:
+		return "NX I511 VDPA VF Ethernet Controller Virtual Function", true
+	case 0x1cf2806b:
+		return "NEO X512 RDMA PF Ethernet Controller", true
+	case 0x1cf2806c:
+		return "NEO X512 RDMA VF Ethernet Controller Virtual Function", true
+	case 0x1cf2806d:
+		return "NX I512 RDMA PF Ethernet Controller", true
+	case 0x1cf2806e:
+		return "NX I512 RDMA VF Ethernet Controller Virtual Function", true
+	case 0x1cf2806f:
+		return "NX I512 UPF BOND PF Ethernet Controller", true
+	case 0x1cf2807d:
+		return "NX E312S SRIOV PF Ethernet Controller", true
+	case 0x1cf2807e:
+		return "NX E316 SRIOV PF Ethernet Controller", true
+	case 0x1cf2807f:
+		return "NX E316 SRIOV VF Ethernet Controller Virtual Function", true
+	case 0x1cf28080:
+		return "NX E311 SRIOV PF Ethernet Controller", true
+	case 0x1cf28081:
+		return "NX E311 SRIOV VF Ethernet Controller Virtual Function", true
+	case 0x1cf28082:
+		return "NX I511 SRIOV PF Ethernet Controller", true
+	case 0x1cf28083:
+		return "NX I511 SRIOV VF Ethernet Controller Virtual Function", true
+	case 0x1cf28084:
+		return "NX E310 RDMA PF Ethernet Controller", true
+	case 0x1cf28085:
+		return "NX E310 RDMA VF Ethernet Controller Virtual Function", true
+	case 0x1cf28086:
+		return "NX I510 SRIOV SEC PF Ethernet Controller", true
+	case 0x1cf28087:
+		return "NX I510 SRIOV SEC VF Ethernet Controller Virtual Function", true
+	case 0x1cf28088:
+		return "NX E312S SRIOV VF Ethernet Controller Virtual Function", true
+	case 0x1cf28089:
+		return "NEO X512 SRIOV PF Ethernet Controller", true
+	case 0x1cf2808a:
+		return "NEO X512 SRIOV PF Ethernet Controller", true
+	case 0x1cf280a0:
+		return "NX E312 PF Ethernet Controller", true
+	case 0x1cf280a1:
+		return "NX E312 VF Ethernet Controller Virtual Function", true
+	case 0x1cf280a2:
+		return "NX E312S_D SRIOV PF Ethernet Controller", true
+	case 0x1cf280a3:
+		return "NX E312S_D SRIOV VF Ethernet Controller Virtual Function", true
+	case 0x1cf280a4:
+		return "NX I512 OFFLOAD PF Ethernet Controller", true
 	case 0x1cfd6300:
 		return "MX6300 series PCIe x8 NVMe SSD", true
 	case 0x1d056027:
@@ -31710,6 +32204,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "DERA MENG NVMe Controller", true
 	case 0x1d781515:
 		return "DERA EMEI NVMe Controller", true
+	case 0x1d781516:
+		return "DERA D8436/D8456 NVMe SSD", true
 	case 0x1d792262:
 		return "NVMe PCIe SSD 220S/MTE662T2", true
 	case 0x1d792263:
@@ -31718,6 +32214,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "NVMe PCIe SSD 250H", true
 	case 0x1d792267:
 		return "NVMe PCIe SSD 220S/240S/MTE710T", true
+	case 0x1d792269:
+		return "NVMe PCIe SSD 410S (DRAM-less)", true
 	case 0x1d795766:
 		return "NVMe PCIe SSD 110Q (DRAM-less)", true
 	case 0x1d7c0001:
@@ -31830,6 +32328,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "FORESEE XP2100 NVMe SSD (DRAM-less)", true
 	case 0x1d975236:
 		return "Lexar NM800 PRO NVME SSD", true
+	case 0x1d975772:
+		return "Lexar NQ700 NVME SSD (DRAM-less)", true
 	case 0x1d9b0010:
 		return "Networking DOM Engine", true
 	case 0x1d9b0011:
@@ -31994,6 +32494,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "DSC PDS Core Management", true
 	case 0x1dd8100d:
 		return "DSC Virtio Network Device VF", true
+	case 0x1dd8100f:
+		return "Register/Memory Resource Device", true
+	case 0x1dd81012:
+		return "TAWK IPC Device", true
 	case 0x1de00000:
 		return "TSP [GroqChip]", true
 	case 0x1de10391:
@@ -32026,10 +32530,16 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "RCEC PF", true
 	case 0x1ded8004:
 		return "RCEC VF", true
+	case 0x1dee1202:
+		return "HP EX900 Plus NVMe SSD (DRAM-less)", true
+	case 0x1dee1602:
+		return "HP FX700 NVMe SSD (DRAM-less)", true
 	case 0x1dee2262:
 		return "HP EX950 NVMe SSD", true
 	case 0x1dee2263:
 		return "HP EX900 NVMe SSD (DRAM-less)", true
+	case 0x1dee2500:
+		return "XCG 2500 Enterprise Gen 4 SSD", true
 	case 0x1dee4121:
 		return "PCIe 4.0 SP406/416 NVMe SSD", true
 	case 0x1dee5161:
@@ -32140,12 +32650,16 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "NVMe SSD Controller XG8", true
 	case 0x1e0f0011:
 		return "NVMe SSD Controller CD7", true
+	case 0x1e0f0013:
+		return "VMe SSD Controller CM7", true
 	case 0x1e0f0014:
 		return "NVMe SSD Controller CM7 EDSFF", true
 	case 0x1e0f0018:
 		return "Exceria Pro NVMe SSD", true
 	case 0x1e0f001a:
 		return "NVMe SSD Controller BG6 (DRAM-less)", true
+	case 0x1e0f001b:
+		return "NVMe SSD Controller EG6 (DRAM-less)", true
 	case 0x1e0f001f:
 		return "NVMe SSD Controller CD8", true
 	case 0x1e0f0025:
@@ -32156,6 +32670,18 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "NVMe SSD Controller CD8P", true
 	case 0x1e0f002c:
 		return "NVMe SSD Controller CD8P EDSFF", true
+	case 0x1e0f002e:
+		return "NVMe SSD Controller XD8", true
+	case 0x1e0f002f:
+		return "NVMe SSD Controller BG7 (DRAM-less)", true
+	case 0x1e0f0030:
+		return "NVMe SSD Controller EG7", true
+	case 0x1e0f0031:
+		return "PCIe 5.0 NVMe SSD Controller XG10", true
+	case 0x1e0f0032:
+		return "PCIe 4.0 NVMe SSD Controller XG10d", true
+	case 0x1e0f0033:
+		return "Exceria Plus G4 NVMe SSD (DRAM-less)", true
 	case 0x1e240101:
 		return "Acorn CLE-101", true
 	case 0x1e240215:
@@ -32206,6 +32732,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "S60G [Enflame]", true
 	case 0x1e36c035:
 		return "S60 [Enflame]", true
+	case 0x1e36c041:
+		return "L300 [Enflame]", true
+	case 0x1e36c042:
+		return "L600 [Enflame]", true
 	case 0x1e380102:
 		return "Xplorer X1600", true
 	case 0x1e3a2263:
@@ -32216,6 +32746,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "NVMe SSD Controller DP800", true
 	case 0x1e3b1098:
 		return "Haishen3 NVMe SSD", true
+	case 0x1e3b1321:
+		return "AdgeStor NVMe SSD", true
 	case 0x1e3b1333:
 		return "Haishen5 NVMe SSD", true
 	case 0x1e3b3001:
@@ -32256,6 +32788,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "ZHITAI TiPro7000", true
 	case 0x1e490071:
 		return "ZHITAI TiPlus7100", true
+	case 0x1e490081:
+		return "ZHITAI Ti600 NVMe SSD", true
 	case 0x1e491001:
 		return "PC005 NVMe SSD", true
 	case 0x1e491011:
@@ -32270,6 +32804,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "PC411 M.2 2280 NVMe SSD (DRAM-less)", true
 	case 0x1e491073:
 		return "PC411 M.2 2242 NVMe SSD (DRAM-less)", true
+	case 0x1e491081:
+		return "PC41Q M.2 2280 NVMe SSD (DRAM-less)", true
 	case 0x1e4b1001:
 		return "NVMe SSD Controller MAP1001", true
 	case 0x1e4b1002:
@@ -32306,6 +32842,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "AI controller A7010", true
 	case 0x1e602864:
 		return "Hailo-8 AI Processor", true
+	case 0x1e6045c4:
+		return "Hailo-10H AI Processor", true
 	case 0x1e670002:
 		return "runAI200 AI Inference Accelerator", true
 	case 0x1e670004:
@@ -32318,8 +32856,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "XLX2B128A Switch ASIC", true
 	case 0x1e7cbca1:
 		return "AKD1000 Neural Network Coprocessor [Akida]", true
+	case 0x1e7e0200:
+		return "XDP [Extreme Data Processor PRO 1.0]", true
 	case 0x1e7e9034:
-		return "Pliops Extreme Data Processor [XDP1.0]", true
+		return "XDP [Extreme Data Processor FLEX 1.0]", true
 	case 0x1e7f6002:
 		return "MMY MMSP350 PCIe 3 NVMe SSD (DRAM-less)", true
 	case 0x1e7f6003:
@@ -32346,6 +32886,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "CL4-8D512 NVMe SSD M.2 (DRAM-less)", true
 	case 0x1e951008:
 		return "CL5-8D512 NVMe SSD M.2 (DRAM-less)", true
+	case 0x1e95100c:
+		return "CL6 Series NVMe SSD M.2 (DRAM-less)", true
+	case 0x1e951010:
+		return "CX3 Series NVMe SSD", true
 	case 0x1e953500:
 		return "CA5-8D256 NVMe SSD M.2", true
 	case 0x1e9535f1:
@@ -32359,6 +32903,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x1ea02a20:
 		return "Cloud Intelligent Inference and Training Controller", true
 	case 0x1ea02a22:
+		return "Cloud Intelligent Inference Controller", true
+	case 0x1ea02a24:
+		return "Cloud Intelligent Inference Controller", true
+	case 0x1ea02a26:
 		return "Cloud Intelligent Inference Controller", true
 	case 0x1ea02a30:
 		return "Cloud Video Transcode Controller", true
@@ -32392,10 +32940,16 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "SG100", true
 	case 0x1ec6020f:
 		return "SG100 vGPU", true
+	case 0x1ec60300:
+		return "SR100", true
 	case 0x1ec88800:
 		return "Fantasy I", true
 	case 0x1ec88810:
 		return "Fantasy I", true
+	case 0x1ec88900:
+		return "GR308", true
+	case 0x1ec88902:
+		return "GR3 Audio", true
 	case 0x1ec89800:
 		return "Fantasy II", true
 	case 0x1ec89802:
@@ -32404,6 +32958,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Fantasy II", true
 	case 0x1ec89810:
 		return "Fantasy II-M", true
+	case 0x1ec89a00:
+		return "GR316", true
 	case 0x1eca0000:
 		return "Envise-B", true
 	case 0x1ed02283:
@@ -32568,6 +33124,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "RBLN-CA12 (PF)", true
 	case 0x1eff1121:
 		return "RBLN-CA12 (VF)", true
+	case 0x1eff1210:
+		return "RBLN-CA21 (PF)", true
+	case 0x1eff1211:
+		return "RBLN-CA21 (VF)", true
 	case 0x1eff1220:
 		return "RBLN-CA22 (PF)", true
 	case 0x1eff1221:
@@ -32633,23 +33193,23 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x1f0f340a:
 		return "M18110 Lx Family BASE-T OCP", true
 	case 0x1f0f340b:
-		return "M18120 Family", true
+		return "M18000 Family", true
 	case 0x1f0f340c:
-		return "M18120 Lx Family", true
+		return "M18000 Lx Family", true
 	case 0x1f0f340d:
-		return "M18120 Family BASE-T", true
+		return "M18000 Family BASE-T", true
 	case 0x1f0f340e:
-		return "M18120 Lx Family BASE-T", true
+		return "M18000 Lx Family BASE-T", true
 	case 0x1f0f340f:
-		return "M18120 Family OCP", true
+		return "M18000 Family OCP", true
 	case 0x1f0f3410:
-		return "M18120 Lx Family OCP", true
+		return "M18000 Lx Family OCP", true
 	case 0x1f0f3411:
-		return "M18120 Family BASE-T OCP", true
+		return "M18000 Family BASE-T OCP", true
 	case 0x1f0f3412:
-		return "M18120 Lx Family BASE-T OCP", true
+		return "M18000 Lx Family BASE-T OCP", true
 	case 0x1f0f3413:
-		return "M18100 Family Virtual Function", true
+		return "M18000 Family Virtual Function", true
 	case 0x1f0f9088:
 		return "D1055AS PCI Express Switch Downstream Port", true
 	case 0x1f16c500:
@@ -32720,12 +33280,58 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "PCIe 3 NVMe SSD (DRAM-less)", true
 	case 0x1f471001:
 		return "FLEXFLOW-2200T Ethernet Controller", true
+	case 0x1f471002:
+		return "FLEXFLOW-2200T Ethernet Controller [Virtual Function]", true
 	case 0x1f471003:
-		return "FLEXFLOW-2200T Ethernet Controller MGMT Function", true
+		return "FLEXFLOW-2200T Ethernet Controller [MGMT Function]", true
+	case 0x1f471004:
+		return "FLEXFLOW-2200T DATA Offload Engine", true
+	case 0x1f471005:
+		return "CONFLUX-2200P NVMe Controller", true
+	case 0x1f471011:
+		return "FLEXFLOW-2200T Ethernet Controller", true
+	case 0x1f471203:
+		return "FLEXFLOW-2200T RoCEv2 Network Controller", true
 	case 0x1f472018:
 		return "DPU Card", true
 	case 0x1f472020:
 		return "DPU", true
+	case 0x1f473101:
+		return "FLEXFLOW-2100R Ethernet Controller", true
+	case 0x1f473201:
+		return "FLEXFLOW-2200R Ethernet Controller", true
+	case 0x1f473211:
+		return "FLEXFLOW-2200R Ethernet Controller", true
+	case 0x1f474001:
+		return "CONFLUX-2200E Ethernet Controller", true
+	case 0x1f474002:
+		return "CONFLUX-2200E Ethernet Controller [Virtual Function]", true
+	case 0x1f474003:
+		return "CONFLUX-2200E Ethernet Controller [MGMT Function]", true
+	case 0x1f474004:
+		return "CONFLUX-2200E DATA Offload Engine", true
+	case 0x1f474203:
+		return "CONFLUX-2200E RoCEv2 Network Controller", true
+	case 0x1f475001:
+		return "CONFLUX-2200P Ethernet Controller", true
+	case 0x1f475002:
+		return "CONFLUX-2200P Ethernet Controller [Virtual Function]", true
+	case 0x1f475003:
+		return "CONFLUX-2200P NVMe Controller", true
+	case 0x1f475004:
+		return "CONFLUX-2200P NVMe Controller [Virtual Function]", true
+	case 0x1f475005:
+		return "CONFLUX-2200P Ethernet Controller [MGMT Function]", true
+	case 0x1f475006:
+		return "CONFLUX-2200P Ethernet Controller [YDMI Function]", true
+	case 0x1f475007:
+		return "CONFLUX-2200P DATA OFFLOAD ENGINE", true
+	case 0x1f475011:
+		return "CONFLUX-2200P Ethernet Controller", true
+	case 0x1f475015:
+		return "CONFLUX-2200P Ethernet Controller [MGMT Function]", true
+	case 0x1f475016:
+		return "CONFLUX-2200P Ethernet Controller [YDMI Function]", true
 	case 0x1f521008:
 		return "Mango GPUBoost - RDMA", true
 	case 0x1f521020:
@@ -32762,6 +33368,20 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Default ID for Titanium FPGA PCIe Interface (AXI)", true
 	case 0x1f820011:
 		return "Corsair [DMX 1000 Series]", true
+	case 0x1f8200f1:
+		return "Jetstream [DMX F1 Transparent NIC]", true
+	case 0x1f907024:
+		return "QRNG PCIe Device", true
+	case 0x1f907025:
+		return "QRNG PCIe Device", true
+	case 0x1f991202:
+		return "TWSC TE3420 series", true
+	case 0x1f991608:
+		return "PCIe Gen4 x4 M.2 2280", true
+	case 0x1f991f88:
+		return "TE3420 PCIe Gen3 x4 M.2 2280", true
+	case 0x1f993420:
+		return "PCIe Gen3 x4 M.2 2280", true
 	case 0x1f9d1100:
 		return "Metis AIPU (rev 02)", true
 	case 0x1f9d11aa:
@@ -32896,10 +33516,16 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "NF1618 PCI Express Ethernet Controller", true
 	case 0x20361619:
 		return "NF1618 Family Virtual Function", true
+	case 0x205c1514:
+		return "EP9410 U.2 1.92TB NVME SSD", true
 	case 0x205c1515:
 		return "EP9410 U.2 3.84TB NVME SSD", true
-	case 0x205c1516:
-		return "EP9410 U.2 7.68TB NVME SSD", true
+	case 0x205c1534:
+		return "EP9430 U.2 1.6TB NVME SSD", true
+	case 0x205c1535:
+		return "EP9430 U.2 3.2TB NVME SSD", true
+	case 0x205c1536:
+		return "EP9430 U.2 6.4TB NVME SSD", true
 	case 0x20614000:
 		return "E4000 controller", true
 	case 0x20614100:
@@ -32944,10 +33570,24 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "KCP54(04) 2280 PCIe G4 x4 TLC", true
 	case 0x209b1000:
 		return "TCU Family - TCU-1", true
+	case 0x209b1001:
+		return "TCU Family - TCU-1 Virtual Function", true
 	case 0x20a91008:
 		return "NEOTAPX FPGA Accelerator Card", true
 	case 0x20a91104:
 		return "NEOTAPX FPGA Timing Synchronization Card", true
+	case 0x20ba1202:
+		return "NAND memory controller", true
+	case 0x20bb0111:
+		return "OPNIC", true
+	case 0x20bc1001:
+		return "Smart Network Adapter", true
+	case 0x20bc2001:
+		return "Solid State Storage", true
+	case 0x20d02001:
+		return "PACIFIC-S1 NVMe SSD", true
+	case 0x20d20200:
+		return "XRaid [Extreme Performance Compression RAID Accelerator]", true
 	case 0x22b822a0:
 		return "Flex Logix InferX X1 Inference Accelerator", true
 	case 0x22db1200:
@@ -33005,7 +33645,7 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x2646501e:
 		return "OM3PGP4 NVMe SSD (DRAM-less)", true
 	case 0x2646501f:
-		return "FURY Renegade NVMe SSD + Heatsink [E18]", true
+		return "FURY Renegade NVMe SSD [E18] (Heatsink)", true
 	case 0x26465021:
 		return "OM8SEP4 Design-In PCIe 4 NVMe SSD (QLC) (DRAM-less)", true
 	case 0x26465022:
@@ -33024,8 +33664,14 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "NV3 NVMe SSD [SM2268XT2] (DRAM-less)", true
 	case 0x2646502a:
 		return "FURY Renegade G5 NVMe SSD [SM2508]", true
+	case 0x2646502b:
+		return "NV3 NVMe SSD [E29T] (DRAM-less)", true
 	case 0x2646502c:
 		return "DC3000ME NVMe SSD [SC5]", true
+	case 0x2646502d:
+		return "OM8TAP4 PCIe 4 NVMe SSD (QLC) (DRAM-less)", true
+	case 0x26465030:
+		return "NV3 2230 NVMe SSD [SM2268XT2] (DRAM-less)", true
 	case 0x29556e61:
 		return "OHCI USB 1.1 controller", true
 	case 0x2a182a22:
@@ -33070,6 +33716,20 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "AS-i 3.0 cPCI Master", true
 	case 0x34421922:
 		return "AS-i 3.0 PCI Master", true
+	case 0x36330001:
+		return "AK400 DIGITAL CPU Air Cooler", true
+	case 0x36330002:
+		return "AK620 DIGITAL CPU Air Cooler", true
+	case 0x36330003:
+		return "AK500 DIGITAL CPU Air Cooler", true
+	case 0x36330004:
+		return "AK500S DIGITAL CPU Air Cooler", true
+	case 0x36330005:
+		return "CH560 DIGITAL PC Case", true
+	case 0x36330006:
+		return "LS Series (LS520 / LS720 SE DIGITAL) CPU Liquid Cooler", true
+	case 0x36330007:
+		return "MORPHEUS PC Case", true
 	case 0x37d91138:
 		return "SCHD-PH-8 Phase detector", true
 	case 0x37d91140:
@@ -33184,6 +33844,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "NX3031 Multifunction 1/10-Gigabit Server Adapter", true
 	case 0x41440044:
 		return "ADM-XRCIIPro", true
+	case 0x4149d011:
+		return "HIL camera injector board", true
 	case 0x41500001:
 		return "PCI32TLITE FILSTRUP1 PCI to VME Bridge Controller", true
 	case 0x41500006:
@@ -33846,6 +34508,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Arise2030", true
 	case 0x67663d08:
 		return "Arise2020", true
+	case 0x67663d0e:
+		return "Arise10D0", true
 	case 0x67663d40:
 		return "GLF HDMI/DP Audio", true
 	case 0x67663d41:
@@ -34652,6 +35316,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Crystal Well DRAM Controller", true
 	case 0x80860d01:
 		return "Crystal Well PCI Express x16 Controller", true
+	case 0x80860d03:
+		return "Crystal Well Dynamic Platform and Thermal Framework Processor Participant", true
 	case 0x80860d04:
 		return "Crystal Well DRAM Controller", true
 	case 0x80860d05:
@@ -34660,8 +35326,12 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Crystal Well PCI Express x4 Controller", true
 	case 0x80860d0c:
 		return "Crystal Well HD Audio Controller", true
+	case 0x80860d12:
+		return "Crystal Well Integrated Graphics Controller", true
 	case 0x80860d16:
 		return "Crystal Well Integrated Graphics Controller", true
+	case 0x80860d22:
+		return "Crystal Well Integrated Iris Pro Graphics 5200", true
 	case 0x80860d26:
 		return "Crystal Well Integrated Graphics Controller", true
 	case 0x80860d36:
@@ -35402,6 +36072,12 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "82815 815 Chipset AGP Bridge", true
 	case 0x80861132:
 		return "82815 Chipset Graphics Controller (CGC)", true
+	case 0x80861133:
+		return "Thunderbolt 4 Bridge [Maple Ridge 2C 2020]", true
+	case 0x80861134:
+		return "Thunderbolt 4 NHI [Maple Ridge 2C 2020]", true
+	case 0x80861135:
+		return "Thunderbolt 4 USB Controller [Maple Ridge 2C 2020]", true
 	case 0x80861136:
 		return "Thunderbolt 4 Bridge [Maple Ridge 4C 2020]", true
 	case 0x80861137:
@@ -37618,6 +38294,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "82801H (ICH8 Family) Thermal Reporting Device", true
 	case 0x80862850:
 		return "82801HM/HEM (ICH8M/ICH8M-E) IDE Controller", true
+	case 0x80862880:
+		return "Ice Lake DDRIO Registers", true
 	case 0x808628c0:
 		return "Volume Management Device NVMe RAID Controller", true
 	case 0x80862912:
@@ -38854,8 +39532,60 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Ice Lake UPI Misc", true
 	case 0x80863441:
 		return "Ice Lake UPI Link/Phy0", true
+	case 0x80863442:
+		return "Ice Lake UPI Phy0 Registers", true
+	case 0x80863445:
+		return "Ice Lake UPI Mesh Stop Registers", true
+	case 0x80863446:
+		return "Ice Lake UPI PMON0 Registers", true
+	case 0x80863447:
+		return "Ice Lake UPI PMON1 Registers", true
+	case 0x80863448:
+		return "Ice Lake PCU Registers", true
+	case 0x8086344a:
+		return "Ice Lake Integrated Memory Controller", true
+	case 0x8086344b:
+		return "Ice Lake PCU Registers", true
+	case 0x8086344c:
+		return "Ice Lake CHA Registers", true
+	case 0x8086344d:
+		return "Ice Lake CHA Registers", true
+	case 0x8086344f:
+		return "Ice Lake CHA Registers", true
+	case 0x80863450:
+		return "Ice Lake Ubox Registers", true
+	case 0x80863451:
+		return "Ice Lake Ubox Registers", true
+	case 0x80863452:
+		return "Ice Lake Ubox Registers", true
+	case 0x80863455:
+		return "Ice Lake Ubox Registers", true
 	case 0x80863456:
 		return "Ice Lake NorthPeak", true
+	case 0x80863457:
+		return "Ice Lake CHA Registers", true
+	case 0x80863458:
+		return "Ice Lake PCU Registers", true
+	case 0x80863459:
+		return "Ice Lake PCU Registers", true
+	case 0x8086345a:
+		return "Ice Lake PCU Registers", true
+	case 0x8086345b:
+		return "Ice Lake PCU Registers", true
+	case 0x8086345c:
+		return "Ice Lake PCU Registers", true
+	case 0x8086345d:
+		return "Ice Lake PCU Registers", true
+	case 0x8086345e:
+		return "Ice Lake PCU Registers", true
+	case 0x8086347a:
+		return "Ice Lake PCI Express Root Port A", true
+	case 0x8086347b:
+		return "Ice Lake PCI Express Root Port B", true
+	case 0x8086347c:
+		return "Ice Lake PCI Express Root Port C", true
+	case 0x8086347d:
+		return "Ice Lake PCI Express Root Port D", true
 	case 0x8086347e:
 		return "Ice Lake Xeon Non-Transparent Bridge", true
 	case 0x80863482:
@@ -39124,8 +39854,18 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Xeon C5500/C3500 Reserved", true
 	case 0x8086373f:
 		return "Xeon C5500/C3500 IOxAPIC", true
+	case 0x808637c0:
+		return "C62x chipset series PCIe x16/x8 Upstream Port", true
+	case 0x808637c2:
+		return "C62x chipset series PCIe Virtual Switch Port 0", true
+	case 0x808637c3:
+		return "C62x chipset series PCIe Virtual Switch Port 1", true
+	case 0x808637c4:
+		return "C62x chipset series PCIe Virtual Switch Port 2", true
+	case 0x808637c5:
+		return "C62x chipset series PCIe Virtual Switch Port 3", true
 	case 0x808637c8:
-		return "C62x Chipset QuickAssist Technology", true
+		return "C62x Chipset series QuickAssist Technology Physical Function 0~2", true
 	case 0x808637c9:
 		return "C62x Chipset QuickAssist Technology Virtual Function", true
 	case 0x808637cc:
@@ -39460,6 +40200,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Xeon E5/Core i7 DMA", true
 	case 0x80863c40:
 		return "Xeon E5/Core i7 IIO Switch and IRP Performance Monitor", true
+	case 0x80863c41:
+		return "Sandy Bridge QPI Port 0 Performance Monitor", true
+	case 0x80863c42:
+		return "Sandy Bridge QPI Port 1 Performance Monitor", true
 	case 0x80863c43:
 		return "Xeon E5/Core i7 Ring to PCI Express Performance Monitor", true
 	case 0x80863c44:
@@ -39476,12 +40220,16 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Xeon E5/Core i7 QPI Link Reut 0", true
 	case 0x80863c84:
 		return "Xeon E5/Core i7 QPI Link Reut 0", true
+	case 0x80863c86:
+		return "Sandy Bridge QPI Port 0 DFX Link", true
 	case 0x80863c90:
 		return "Xeon E5/Core i7 QPI Link 1", true
 	case 0x80863c93:
 		return "Xeon E5/Core i7 QPI Link Reut 1", true
 	case 0x80863c94:
 		return "Xeon E5/Core i7 QPI Link Reut 1", true
+	case 0x80863c96:
+		return "Sandy Bridge QPI Port 1 DFX Link", true
 	case 0x80863ca0:
 		return "Xeon E5/Core i7 Processor Home Agent", true
 	case 0x80863ca8:
@@ -39558,6 +40306,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "8th Gen Core 4-core Workstation Processor Host Bridge/DRAM Registers [Coffee Lake S]", true
 	case 0x80863e1f:
 		return "8th Gen Core 4-core Desktop Processor Host Bridge/DRAM Registers [Coffee Lake S]", true
+	case 0x80863e20:
+		return "i9 Core / Xeon E 2200M Coffee Lake Host Bridge / DRAM Registers", true
 	case 0x80863e30:
 		return "8th/9th Gen Core 8-core Desktop Processor Host Bridge/DRAM Registers [Coffee Lake S]", true
 	case 0x80863e33:
@@ -39607,7 +40357,7 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x80863ec2:
 		return "8th Gen Core Processor Host Bridge/DRAM Registers", true
 	case 0x80863ec4:
-		return "8th Gen Core Processor Host Bridge/DRAM Registers", true
+		return "8th/9th Gen Core Processor Host Bridge / DRAM Registers", true
 	case 0x80863ec6:
 		return "8th Gen Core Processor Host Bridge/DRAM Registers", true
 	case 0x80863eca:
@@ -40250,12 +41000,24 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "80310 (IOP) IO Processor", true
 	case 0x80865481:
 		return "Alder Lake-N PCH eSPI Controller", true
+	case 0x808654a0:
+		return "Alder Lake-N P2SB Bridge", true
+	case 0x808654a1:
+		return "Alder Lake-N Power Management Controller (PMC)", true
 	case 0x808654a3:
 		return "Alder Lake-N SMBus", true
 	case 0x808654a4:
 		return "Alder Lake-N SPI (flash) Controller", true
+	case 0x808654a6:
+		return "Alder Lake-N Intel Trace Hub", true
 	case 0x808654a8:
 		return "Alder Lake-N Serial IO UART Host Controller", true
+	case 0x808654a9:
+		return "Alder Lake-N UART Controller", true
+	case 0x808654aa:
+		return "Alder Lake-N Generic SPI (GSPI) Controller #0", true
+	case 0x808654ab:
+		return "Alder Lake-N Generic SPI (GSPI) Controller #1", true
 	case 0x808654b0:
 		return "Alder Lake-N PCI Express Root Port #9", true
 	case 0x808654b1:
@@ -40274,18 +41036,60 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Alder Lake-N PCI Express Root Port #4", true
 	case 0x808654be:
 		return "Alder Lake-N PCI Express Root Port #7", true
+	case 0x808654c4:
+		return "Alder Lake-N eMMC Controller", true
+	case 0x808654c5:
+		return "Alder Lake-N I2C Controller #4", true
+	case 0x808654c6:
+		return "Alder Lake-N I2C Controller #5", true
+	case 0x808654c7:
+		return "Alder Lake-N UART Controller #2", true
 	case 0x808654c8:
 		return "Alder Lake-N PCH High Definition Audio Controller", true
+	case 0x808654d0:
+		return "Alder Lake-N Touch Host Controller #0 (THC #0)", true
+	case 0x808654d1:
+		return "Alder Lake-N Touch Host Controller #1 (THC #1)", true
 	case 0x808654d3:
 		return "Alder Lake-N SATA AHCI Controller", true
+	case 0x808654da:
+		return "Alder Lake-N UART Controller #3", true
 	case 0x808654e0:
 		return "Alder Lake-N PCH HECI Controller", true
+	case 0x808654e1:
+		return "Alder Lake-N PCH HECI Controller", true
+	case 0x808654e4:
+		return "Alder Lake-N PCH HECI Controller", true
+	case 0x808654e5:
+		return "Alder Lake-N PCH HECI Controller", true
+	case 0x808654e8:
+		return "Alder Lake-N PCH I2C Controller", true
+	case 0x808654e9:
+		return "Alder Lake-N PCH I2C Controller", true
+	case 0x808654ea:
+		return "Alder Lake-N PCH I2C Controller", true
+	case 0x808654eb:
+		return "Alder Lake-N PCH I2C Controller", true
 	case 0x808654ed:
-		return "Alder Lake-N PCH USB 3.2 xHCI Host Controller", true
+		return "Alder Lake-N PCH USB 3.2 Gen 2x1 (10 Gb/s) xHCI Host Controller", true
+	case 0x808654ee:
+		return "Alder Lake-N USB 3.2 Gen 1x1 (5 Gb/s) Device Controller (xDCI)", true
 	case 0x808654ef:
 		return "Alder Lake-N PCH Shared SRAM", true
 	case 0x808654f0:
-		return "CNVi: Wi-Fi", true
+		return "Alder Lake-N PCH CNVi WiFi", true
+	case 0x808654f1:
+		return "Alder Lake-N PCH CNVi WiFi", true
+	case 0x808654f2:
+		return "Alder Lake-N PCH CNVi WiFi", true
+	case 0x808654f3:
+		return "Alder Lake-N PCH CNVi WiFi", true
+	case 0x808654fb:
+		return "Alder Lake-N Generic SPI (GSPI) Controller #2", true
+	case 0x808654fc:
+		return "Alder Lake-N Integrated Sensor Hub", true
+	case 0x808654ff:
+		return "Alder Lake-N UFS Controller", true
 	case 0x80865502:
 		return "Ethernet Controller (2) I225-LMvP", true
 	case 0x80865690:
@@ -40353,21 +41157,21 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x808656c2:
 		return "ATS-M [Data Center GPU Flex 170V]", true
 	case 0x80865780:
-		return "Thunderbolt 80/120G Bridge [Barlow Ridge Host 80G 2023]", true
+		return "JHL9580 Thunderbolt 5 80/120G Bridge [Barlow Ridge Host 80G 2023]", true
 	case 0x80865781:
-		return "Thunderbolt 80/120G NHI [Barlow Ridge Host 80G 2023]", true
+		return "JHL9580 Thunderbolt 5 80/120G NHI [Barlow Ridge Host 80G 2023]", true
 	case 0x80865782:
-		return "Thunderbolt 80/120G USB Controller [Barlow Ridge Host 80G 2023]", true
+		return "JHL9580 Thunderbolt 5 80/120G USB Controller [Barlow Ridge Host 80G 2023]", true
 	case 0x80865783:
-		return "Thunderbolt Bridge [Barlow Ridge Host 40G 2023]", true
+		return "JHL9540 Thunderbolt 4 Bridge [Barlow Ridge Host 40G 2023]", true
 	case 0x80865784:
-		return "Thunderbolt NHI [Barlow Ridge Host 40G 2023]", true
+		return "JHL9540 Thunderbolt 4 NHI [Barlow Ridge Host 40G 2023]", true
 	case 0x80865785:
-		return "Thunderbolt USB Controller [Barlow Ridge Host 40G 2023]", true
+		return "JHL9540 Thunderbolt 4 USB Controller [Barlow Ridge Host 40G 2023]", true
 	case 0x80865786:
-		return "Thunderbolt 80/120G Bridge [Barlow Ridge Hub 80G 2023]", true
+		return "JHL9480 Thunderbolt 5 80/120G Bridge [Barlow Ridge Hub 80G 2023]", true
 	case 0x80865787:
-		return "Thunderbolt 80/120G USB Controller [Barlow Ridge Hub 80G 2023]", true
+		return "JHL9480 Thunderbolt 5 80/120G USB Controller [Barlow Ridge Hub 80G 2023]", true
 	case 0x80865795:
 		return "Granite Rapids Chipset LPC Controller", true
 	case 0x8086579c:
@@ -40379,9 +41183,9 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x8086579f:
 		return "Ethernet Connection E825-C 10GbE", true
 	case 0x808657a4:
-		return "Thunderbolt Bridge [Barlow Ridge Hub 40G 2023]", true
+		return "JHL9440 Thunderbolt 4 Bridge [Barlow Ridge Hub 40G 2023]", true
 	case 0x808657a5:
-		return "Thunderbolt USB Controller [Barlow Ridge Hub 40G 2023]", true
+		return "JHL9440 Thunderbolt 4 USB Controller [Barlow Ridge Hub 40G 2023]", true
 	case 0x808657ad:
 		return "E610 Virtual Function", true
 	case 0x808657ae:
@@ -40520,10 +41324,16 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Celeron N3350/Pentium N4200/Atom E3900 Series HSUART Controller #4", true
 	case 0x80865af0:
 		return "Celeron N3350/Pentium N4200/Atom E3900 Series Host Bridge", true
+	case 0x8086641d:
+		return "Lunar Lake-M Dynamic Tuning Technology", true
 	case 0x80866420:
 		return "Lunar Lake [Intel Graphics]", true
 	case 0x8086643e:
 		return "Lunar Lake NPU", true
+	case 0x8086645d:
+		return "Lunar Lake IPU", true
+	case 0x8086647d:
+		return "Lunar Lake-M Crashlog and Telemetry", true
 	case 0x808664a0:
 		return "Lunar Lake [Intel Arc Graphics 130V / 140V]", true
 	case 0x808664b0:
@@ -41106,6 +41916,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Alder Lake-S PCH Serial IO I2C Controller #4", true
 	case 0x80867afd:
 		return "Alder Lake-S PCH Serial IO I2C Controller #5", true
+	case 0x80867d01:
+		return "Meteor Lake-H 6p+8e cores Host Bridge/DRAM Controller", true
 	case 0x80867d03:
 		return "Meteor Lake-P Dynamic Tuning Technology", true
 	case 0x80867d0b:
@@ -41136,6 +41948,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Meteor Lake-P [Intel Graphics]", true
 	case 0x80867e01:
 		return "Meteor Lake-P LPC/eSPI Controller", true
+	case 0x80867e02:
+		return "Meteor Lake-H eSPI Controller", true
 	case 0x80867e22:
 		return "Meteor Lake-P SMBus Controller", true
 	case 0x80867e23:
@@ -41152,6 +41966,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Meteor Lake-P HD Audio Controller", true
 	case 0x80867e30:
 		return "Meteor Lake-P Serial IO SPI Controller #1", true
+	case 0x80867e3f:
+		return "Meteor Lake-H/U PCIe Root Port #8", true
 	case 0x80867e40:
 		return "Meteor Lake PCH CNVi WiFi", true
 	case 0x80867e45:
@@ -41160,6 +41976,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Meteor Lake-P Serial IO SPI Controller #2", true
 	case 0x80867e4c:
 		return "Meteor Lake-P Gaussian & Neural-Network Accelerator", true
+	case 0x80867e4d:
+		return "Meteor Lake-H/U PCIe Root Port #9", true
 	case 0x80867e50:
 		return "Meteor Lake-P Serial IO I2C Controller #4", true
 	case 0x80867e51:
@@ -41182,6 +42000,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Meteor Lake-P USB 3.2 Gen 2x1 xHCI Host Controller", true
 	case 0x80867e7e:
 		return "Meteor Lake-P USB Device Controller", true
+	case 0x80867e7f:
+		return "Meteor Lake-H/U Shared SRAM", true
 	case 0x80867ec0:
 		return "Meteor Lake-P Thunderbolt 4 USB Controller", true
 	case 0x80867ec2:
@@ -41196,6 +42016,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Meteor Lake-P Thunderbolt 4 PCI Express Root Port #2", true
 	case 0x80867ec7:
 		return "Meteor Lake-P Thunderbolt 4 PCI Express Root Port #3", true
+	case 0x80867eca:
+		return "Meteor Lake-H/U PCIe Root Port #10", true
+	case 0x80867ecc:
+		return "Meteor Lake-H PCIe Root Port #12", true
 	case 0x80867f70:
 		return "Arrow Lake-S PCH CNVi WiFi", true
 	case 0x80868002:
@@ -42528,6 +43352,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "C620 Series Chipset Family MROM 0", true
 	case 0x8086a1ed:
 		return "C620 Series Chipset Family MROM 1", true
+	case 0x8086a1f0:
+		return "C62x HD Audio Controller", true
 	case 0x8086a1f8:
 		return "Lewisburg IE: HECI #1", true
 	case 0x8086a1f9:
@@ -42542,6 +43368,40 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Lewisburg SATA Controller [AHCI mode]", true
 	case 0x8086a206:
 		return "Lewisburg SATA Controller [RAID mode]", true
+	case 0x8086a210:
+		return "Lewisburg PCI Express Root Port", true
+	case 0x8086a211:
+		return "Lewisburg PCI Express Root Port", true
+	case 0x8086a212:
+		return "Lewisburg PCI Express Root Port", true
+	case 0x8086a213:
+		return "Lewisburg PCI Express Root Port", true
+	case 0x8086a214:
+		return "Lewisburg PCI Express Root Port", true
+	case 0x8086a215:
+		return "Lewisburg PCI Express Root Port", true
+	case 0x8086a216:
+		return "Lewisburg PCI Express Root Port", true
+	case 0x8086a217:
+		return "Lewisburg PCI Express Root Port", true
+	case 0x8086a218:
+		return "Lewisburg PCI Express Root Port", true
+	case 0x8086a219:
+		return "Lewisburg PCI Express Root Port", true
+	case 0x8086a21a:
+		return "Lewisburg PCI Express Root Port", true
+	case 0x8086a21b:
+		return "Lewisburg PCI Express Root Port", true
+	case 0x8086a21c:
+		return "Lewisburg PCI Express Root Port", true
+	case 0x8086a21d:
+		return "Lewisburg PCI Express Root Port", true
+	case 0x8086a21e:
+		return "Lewisburg PCI Express Root Port", true
+	case 0x8086a21f:
+		return "Lewisburg PCI Express Root Port", true
+	case 0x8086a221:
+		return "Lewisburg Power Management Controller", true
 	case 0x8086a223:
 		return "Lewisburg SMBus", true
 	case 0x8086a224:
@@ -42554,6 +43414,14 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Lewisburg SSATA Controller [AHCI mode]", true
 	case 0x8086a256:
 		return "Lewisburg SSATA Controller [RAID mode]", true
+	case 0x8086a267:
+		return "Lewisburg PCI Express Root Port", true
+	case 0x8086a268:
+		return "Lewisburg PCI Express Root Port", true
+	case 0x8086a269:
+		return "Lewisburg PCI Express Root Port", true
+	case 0x8086a26a:
+		return "Lewisburg PCI Express Root Port", true
 	case 0x8086a282:
 		return "200 Series PCH SATA controller [AHCI mode]", true
 	case 0x8086a286:
@@ -42672,16 +43540,22 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Z390 Chipset LPC/eSPI Controller", true
 	case 0x8086a306:
 		return "Q370 Chipset LPC/eSPI Controller", true
+	case 0x8086a307:
+		return "Q360 Chipset LPC/eSPI Controller", true
 	case 0x8086a308:
-		return "300 Series Chipset Family LPC Controller", true
+		return "B360 Chipset LPC/eSPI Controller", true
 	case 0x8086a309:
-		return "Cannon Point-LP LPC Controller", true
+		return "C246 Chipset LPC/eSPI Controller", true
+	case 0x8086a30a:
+		return "C242 Chipset LPC/eSPI Controller", true
 	case 0x8086a30c:
 		return "QM370 Chipset LPC/eSPI Controller", true
 	case 0x8086a30d:
-		return "HM470 Chipset LPC/eSPI Controller", true
+		return "HM370 Chipset LPC/eSPI Controller", true
 	case 0x8086a30e:
-		return "Cannon Lake LPC Controller", true
+		return "CM246 Chipset LPC/eSPI Controller", true
+	case 0x8086a313:
+		return "Cannon Lake LPC/eSPI Controller", true
 	case 0x8086a323:
 		return "Cannon Lake PCH SMBus Controller", true
 	case 0x8086a324:
@@ -42910,12 +43784,24 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Lunar Lake-M Integrated Sensor Hub", true
 	case 0x8086a847:
 		return "Lunar Lake-M UFS Controller", true
+	case 0x8086a848:
+		return "Lunar Lake-M Touch Host Controller #0 ID1", true
+	case 0x8086a849:
+		return "Lunar Lake-M Touch Host Controller #0 ID2", true
+	case 0x8086a84a:
+		return "Lunar Lake-M Touch Host Controller #1 ID1", true
+	case 0x8086a84b:
+		return "Lunar Lake-M Touch Host Controller #1 ID2", true
 	case 0x8086a84e:
 		return "Lunar Lake-M Thunderbolt 4 PCI Express Root Port #0", true
 	case 0x8086a84f:
 		return "Lunar Lake-M Thunderbolt 4 PCI Express Root Port #1", true
 	case 0x8086a860:
 		return "Lunar Lake-M Thunderbolt 4 PCI Express Root Port #2", true
+	case 0x8086a870:
+		return "Lunar Lake-M CSME HECI #1", true
+	case 0x8086a873:
+		return "Lunar Lake-M Keyboard and Text (KT) Redirection", true
 	case 0x8086a878:
 		return "Lunar Lake-M Serial IO I2C Controller #0", true
 	case 0x8086a879:
@@ -42926,6 +43812,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Lunar Lake-M Serial IO I2C Controller #3", true
 	case 0x8086a87d:
 		return "Lunar Lake-M USB 3.2 Gen 2x1 xHCI Host Controller", true
+	case 0x8086a87f:
+		return "Lunar Lake-M Shared SRAM", true
 	case 0x8086abc0:
 		return "Omni-Path Fabric Switch Silicon 100 Series", true
 	case 0x8086ad0b:
@@ -42941,6 +43829,14 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x8086b082:
 		return "Panther Lake [Intel Graphics]", true
 	case 0x8086b083:
+		return "Panther Lake [Intel Graphics]", true
+	case 0x8086b084:
+		return "Panther Lake [Intel Graphics]", true
+	case 0x8086b085:
+		return "Panther Lake [Intel Graphics]", true
+	case 0x8086b086:
+		return "Panther Lake [Intel Graphics]", true
+	case 0x8086b087:
 		return "Panther Lake [Intel Graphics]", true
 	case 0x8086b08f:
 		return "Panther Lake [Intel Graphics]", true
@@ -43004,12 +43900,22 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "Battlemage G21 [Intel Graphics]", true
 	case 0x8086e210:
 		return "Battlemage G21 [Intel Graphics]", true
+	case 0x8086e211:
+		return "Battlemage G21 [Intel Graphics]", true
 	case 0x8086e212:
 		return "Battlemage G21 [Intel Graphics]", true
 	case 0x8086e215:
 		return "Battlemage G21 [Intel Graphics]", true
 	case 0x8086e216:
 		return "Battlemage G21 [Intel Graphics]", true
+	case 0x8086e220:
+		return "Battlemage G31 [Intel Graphics]", true
+	case 0x8086e221:
+		return "Battlemage G31 [Intel Graphics]", true
+	case 0x8086e222:
+		return "Battlemage G31 [Intel Graphics]", true
+	case 0x8086e223:
+		return "Battlemage G31 [Intel Graphics]", true
 	case 0x8086f1a5:
 		return "SSD 600P Series", true
 	case 0x8086f1a6:
@@ -43022,6 +43928,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "SSD 670p Series [Keystone Harbor]", true
 	case 0x8086faf0:
 		return "SSD 665p Series [Neptune Harbor Refresh]", true
+	case 0x8086fd80:
+		return "Wildcat Lake [Intel Graphics]", true
+	case 0x8086fd81:
+		return "Wildcat Lake [Intel Graphics]", true
 	case 0x80880100:
 		return "WX1860AL-W Gigabit Ethernet Controller", true
 	case 0x80880101:
@@ -43111,7 +44021,9 @@ func lookupProduct(key VendorProduct) (string, bool) {
 	case 0x88488318:
 		return "Ethernet Controller N500 Series for 1GbE (Dual-port, Copper RJ45)", true
 	case 0x88888504:
-		return "AVMatrix VC42", true
+		return "AVMatrix VC42 4-port HDMI Capture", true
+	case 0x88888581:
+		return "AVMatrix VC12 4K HDMI Capture", true
 	case 0x8c4a1980:
 		return "W89C940 misprogrammed [ne2k]", true
 	case 0x8e2e3000:
@@ -43506,6 +44418,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "STAR1500E NVMe SSD", true
 	case 0x9d321504:
 		return "STAR1500L NVMe SSD", true
+	case 0x9d321505:
+		return "STAR1500K NVMe SSD", true
 	case 0x9d321516:
 		return "STAR1516 PCIe NVMe SSD Controller", true
 	case 0x9d322000:
@@ -43638,6 +44552,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "P310 NVMe PCIe SSD (DRAM-less)", true
 	case 0xc0a9542b:
 		return "T705 NVMe PCIe SSD", true
+	case 0xc0a9560b:
+		return "E100 NVMe PCIe SSD (DRAM-less)", true
 	case 0xca010212:
 		return "Vulcan-CL CameraLink Frame Grabber", true
 	case 0xca020213:
@@ -43750,6 +44666,10 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "NE5000 Ethernet Controller", true
 	case 0xd20c6011:
 		return "NE6000 Ethernet Controller", true
+	case 0xd4058200:
+		return "LeapHBA", true
+	case 0xd4058201:
+		return "LeapRAID", true
 	case 0xd4d40601:
 		return "PCI Mezzanine Card", true
 	case 0xdada0133:
@@ -43988,6 +44908,8 @@ func lookupProduct(key VendorProduct) (string, bool) {
 		return "2000MT", true
 	case 0xedd8a0a9:
 		return "2000MI", true
+	case 0xf11700ff:
+		return "Test Device", true
 	case 0xf1171000:
 		return "Emulated PCIe Switch", true
 	case 0xf1171010:
@@ -44143,6 +45065,10 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x025e, Name: "NVMe DC SSD E1.L 9.5mm [D5-P5336]"}, true
 	case 0x025e2b590008:
 		return SubsystemInfo{Vendor: 0x025e, Name: "NVMe DC SSD U.2-SFF 15mm [D7-PS1010]"}, true
+	case 0x025e2b59000c:
+		return SubsystemInfo{Vendor: 0x025e, Name: "NVMe DC SSD E1.S 9.5mm [D7-PS1010]"}, true
+	case 0x025e2b59000d:
+		return SubsystemInfo{Vendor: 0x025e, Name: "NVMe DC SSD E1.S 15mm [D7-PS1010]"}, true
 	case 0x025e2b590019:
 		return SubsystemInfo{Vendor: 0x025e, Name: "NVMe DC SSD E3.S-1T 7.5mm [D7-PS1010]"}, true
 	case 0x025e2b590108:
@@ -44163,6 +45089,20 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x108e, Name: "NVMe DC SSD E3.S-1T 7.5mm 7.68TB [D7-PS1010 Custom]"}, true
 	case 0x025e2b5948a6:
 		return SubsystemInfo{Vendor: 0x108e, Name: "NVMe DC SSD E3.S-1T 7.5mm 15.36TB [D7-PS1010 Custom]"}, true
+	case 0x073111001101:
+		return SubsystemInfo{Vendor: 0x0731, Name: "JM1100-C"}, true
+	case 0x073111001102:
+		return SubsystemInfo{Vendor: 0x0731, Name: "JM1100-II"}, true
+	case 0x073111001103:
+		return SubsystemInfo{Vendor: 0x0731, Name: "JM1100-I"}, true
+	case 0x073111001104:
+		return SubsystemInfo{Vendor: 0x0731, Name: "JM1100-M"}, true
+	case 0x073111001105:
+		return SubsystemInfo{Vendor: 0x0731, Name: "JM1100-Y"}, true
+	case 0x073111001106:
+		return SubsystemInfo{Vendor: 0x0731, Name: "JM1100-EI"}, true
+	case 0x073111001107:
+		return SubsystemInfo{Vendor: 0x0731, Name: "JM1100-EM"}, true
 	case 0x073172007201:
 		return SubsystemInfo{Vendor: 0x0731, Name: "JM7201"}, true
 	case 0x073172007202:
@@ -44728,7 +45668,7 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 	case 0x100000723700:
 		return SubsystemInfo{Vendor: 0x8086, Name: "SSD 910 Series"}, true
 	case 0x1000007296c8:
-		return SubsystemInfo{Vendor: 0x4c52, Name: "LRSA96C8 8-Port SATA3(6Gb/s)Exchange Adapter (with Raid)"}, true
+		return SubsystemInfo{Vendor: 0x4c52, Name: "LRSA96C8 8-Port SATA3 (6Gb/s) Exchange Adapter (with RAID)"}, true
 	case 0x100000730072:
 		return SubsystemInfo{Vendor: 0x1137, Name: "2004 iMR ROMB"}, true
 	case 0x100000730073:
@@ -44927,6 +45867,8 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1bd4, Name: "12G SAS3008IMR RACK"}, true
 	case 0x100000970028:
 		return SubsystemInfo{Vendor: 0x1bd4, Name: "12G SAS3008IR RACK"}, true
+	case 0x100000970457:
+		return SubsystemInfo{Vendor: 0x1014, Name: "9302-8i [N2215]"}, true
 	case 0x100000970808:
 		return SubsystemInfo{Vendor: 0x15d9, Name: "AOC-S3008L-L8e"}, true
 	case 0x100000971f45:
@@ -44947,6 +45889,8 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1000, Name: "SAS9300-8i"}, true
 	case 0x100000973130:
 		return SubsystemInfo{Vendor: 0x1000, Name: "SAS 9300-16i"}, true
+	case 0x100000973170:
+		return SubsystemInfo{Vendor: 0x1000, Name: "SAS9302-16e"}, true
 	case 0x100000a5020a:
 		return SubsystemInfo{Vendor: 0x1d49, Name: "ThinkSystem 450W-16e SAS/SATA PCIe Gen4 24Gb HBA"}, true
 	case 0x100000a51d03:
@@ -45049,6 +45993,12 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1028, Name: "PERC H975i Front"}, true
 	case 0x100000b322d3:
 		return SubsystemInfo{Vendor: 0x1028, Name: "PERC H975i Adapter"}, true
+	case 0x100000b323cb:
+		return SubsystemInfo{Vendor: 0x1028, Name: "PERC H975i Front"}, true
+	case 0x100000b323cd:
+		return SubsystemInfo{Vendor: 0x1028, Name: "PERC H975i Adapter"}, true
+	case 0x100000b32446:
+		return SubsystemInfo{Vendor: 0x1028, Name: "PERC H976i Front"}, true
 	case 0x100000b35000:
 		return SubsystemInfo{Vendor: 0x1000, Name: "MegaRAID 9760W-32i 24G SAS/PCIe Storage Adapter"}, true
 	case 0x100000b35001:
@@ -45061,6 +46011,16 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1000, Name: "eHBA 9700W-16i 24G SAS/PCIe Storage Adapter"}, true
 	case 0x100000b35030:
 		return SubsystemInfo{Vendor: 0x1000, Name: "eHBA 9700-16e 24G SAS/PCIe Storage Adapter"}, true
+	case 0x100000b522d2:
+		return SubsystemInfo{Vendor: 0x1028, Name: "PERC H975i Front - Virtual"}, true
+	case 0x100000b522d3:
+		return SubsystemInfo{Vendor: 0x1028, Name: "PERC H975i Adapter - Virtual"}, true
+	case 0x100000b523cb:
+		return SubsystemInfo{Vendor: 0x1028, Name: "PERC H975i Front - Virtual"}, true
+	case 0x100000b523cd:
+		return SubsystemInfo{Vendor: 0x1028, Name: "PERC H975i Adapter - Virtual"}, true
+	case 0x100000b52446:
+		return SubsystemInfo{Vendor: 0x1028, Name: "PERC H976i Front - Virtual"}, true
 	case 0x100000b55000:
 		return SubsystemInfo{Vendor: 0x1000, Name: "MegaRAID 9760W-32i 24G SAS/PCIe Storage Adapter"}, true
 	case 0x100000b55001:
@@ -47905,6 +48865,8 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1458, Name: "Radeon RX 560"}, true
 	case 0x100267ff2381:
 		return SubsystemInfo{Vendor: 0x148c, Name: "Radeon RX 560"}, true
+	case 0x100267ff5037:
+		return SubsystemInfo{Vendor: 0x1849, Name: "PHANTOM G R RX550 2G/M/ASRK"}, true
 	case 0x100267ff8479:
 		return SubsystemInfo{Vendor: 0x103c, Name: "Radeon RX 560X Mobile"}, true
 	case 0x100267ff9560:
@@ -48251,6 +49213,8 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1002, Name: "Radeon PRO V320"}, true
 	case 0x1002687f04c4:
 		return SubsystemInfo{Vendor: 0x1043, Name: "Radeon RX Vega 64"}, true
+	case 0x1002687f0555:
+		return SubsystemInfo{Vendor: 0x1043, Name: "ROG STRIX RX Vega 56 8GB"}, true
 	case 0x1002687f0b36:
 		return SubsystemInfo{Vendor: 0x1002, Name: "RX Vega64"}, true
 	case 0x1002687f230c:
@@ -49267,6 +50231,8 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1da2, Name: "Sapphire NITRO+ RX 5700 XT"}, true
 	case 0x1002731fe411:
 		return SubsystemInfo{Vendor: 0x1da2, Name: "Navi 10 [Radeon RX 5600 OEM/5600 XT / 5700/5700 XT]Navi 10 [Radeon RX 5600 OEM/5600 XT / 5700/5700 XT]"}, true
+	case 0x100273400210:
+		return SubsystemInfo{Vendor: 0x106b, Name: "Radeon Pro 5300M"}, true
 	case 0x100273a50e3a:
 		return SubsystemInfo{Vendor: 0x1002, Name: "Radeon RX 6950 XT"}, true
 	case 0x100273a5441d:
@@ -49353,8 +50319,14 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1eae, Name: "RX-79GMERCBR [XFX RX 7900 GRE]"}, true
 	case 0x1002744ce471:
 		return SubsystemInfo{Vendor: 0x1da2, Name: "NITRO+ RX 7900 XTX Vapor-X"}, true
+	case 0x1002747e2427:
+		return SubsystemInfo{Vendor: 0x148c, Name: "RX 7800 XT [Hellhound / Red Devil]"}, true
 	case 0x100274805313:
 		return SubsystemInfo{Vendor: 0x1849, Name: "RX 7600 Challenger OC"}, true
+	case 0x100275502435:
+		return SubsystemInfo{Vendor: 0x148c, Name: "Reaper Radeon RX 9070 XT 16GB GDDR6 (RX9070XT 16G-A)"}, true
+	case 0x10027550e490:
+		return SubsystemInfo{Vendor: 0x1da2, Name: "Navi 48 XTX [Sapphire Pulse Radeon RX 9070 XT]"}, true
 	case 0x100279105000:
 		return SubsystemInfo{Vendor: 0x17f2, Name: "KI690-AM2 Motherboard"}, true
 	case 0x10027910ff50:
@@ -52107,6 +53079,8 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1077, Name: "FastLinQ QL45611H 100GbE Adapter (SR-IOV VF)"}, true
 	case 0x107720310241:
 		return SubsystemInfo{Vendor: 0x1077, Name: "QLE2670 16Gb Single Port Fibre Channel Adapter"}, true
+	case 0x107720310249:
+		return SubsystemInfo{Vendor: 0x1077, Name: "QLE2672 16Gb Dual Port Fibre Channel Adapter"}, true
 	case 0x1077203117e7:
 		return SubsystemInfo{Vendor: 0x103c, Name: "SN1000Q 16Gb Single Port Fibre Channel Adapter"}, true
 	case 0x1077203117e8:
@@ -52221,6 +53195,8 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x103c, Name: "StorageWorks 81Q"}, true
 	case 0x107725323263:
 		return SubsystemInfo{Vendor: 0x103c, Name: "StorageWorks 82Q"}, true
+	case 0x1077298100b0:
+		return SubsystemInfo{Vendor: 0x1bd4, Name: "32G SFP28 EP2744 Apatter"}, true
 	case 0x1077800103af:
 		return SubsystemInfo{Vendor: 0x1014, Name: "FC 5708/5270 10 Gb FCoE PCIe Dual Port Adapter for POWER"}, true
 	case 0x107780200203:
@@ -57409,6 +58385,8 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1102, Name: "SB0880 [SoundBlaster X-Fi Titanium PCI-e]"}, true
 	case 0x1102000b0062:
 		return SubsystemInfo{Vendor: 0x1102, Name: "SB1270 [SoundBlaster X-Fi Titanium HD]"}, true
+	case 0x110200100081:
+		return SubsystemInfo{Vendor: 0x1102, Name: "Sound Blaster AE-7"}, true
 	case 0x110200120010:
 		return SubsystemInfo{Vendor: 0x1102, Name: "SB1570 SB Audigy Fx"}, true
 	case 0x110200120191:
@@ -59190,7 +60168,7 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 	case 0x1180083220c5:
 		return SubsystemInfo{Vendor: 0x17aa, Name: "ThinkPad R61"}, true
 	case 0x1180083220c7:
-		return SubsystemInfo{Vendor: 0x17aa, Name: "ThinkPad R61"}, true
+		return SubsystemInfo{Vendor: 0x17aa, Name: "ThinkPad R61/T400"}, true
 	case 0x1180083230b5:
 		return SubsystemInfo{Vendor: 0x103c, Name: "Presario V3242AU"}, true
 	case 0x1180083230b7:
@@ -59889,6 +60867,8 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x122d, Name: "3328 Audio"}, true
 	case 0x122d80da0001:
 		return SubsystemInfo{Vendor: 0x122d, Name: "3328 Audio"}, true
+	case 0x1235c2412382:
+		return SubsystemInfo{Vendor: 0x1028, Name: "4-DIMM Add In Card"}, true
 	case 0x123f81200006:
 		return SubsystemInfo{Vendor: 0x11bd, Name: "DV500 E4"}, true
 	case 0x123f8120000a:
@@ -63114,7 +64094,7 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 	case 0x15b3101500b4:
 		return SubsystemInfo{Vendor: 0x117c, Name: "FastFrame N322 Dual-port 25Gb Ethernet Adapter"}, true
 	case 0x15b310150c10:
-		return SubsystemInfo{Vendor: 0x1e81, Name: "25GbE dual-port SFP28, PCIe3.0 x8 [3SC10]"}, true
+		return SubsystemInfo{Vendor: 0x1f3f, Name: "25GbE dual-port SFP28, PCIe3.0 x8, 3SC10"}, true
 	case 0x15b31015100a:
 		return SubsystemInfo{Vendor: 0x193d, Name: "620F-B"}, true
 	case 0x15b310151023:
@@ -63163,6 +64143,8 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1bd4, Name: "S252MCX6Lx"}, true
 	case 0x15b3101f00af:
 		return SubsystemInfo{Vendor: 0x1ff9, Name: "ENPM6251-SP2"}, true
+	case 0x15b3101f0c11:
+		return SubsystemInfo{Vendor: 0x1f3f, Name: "25GbE dual-port SFP28, PCIe4.0 x8, 3SC1125GbE dual-port SFP28, PCIe4.0 x8, 3SC11"}, true
 	case 0x15b3101f1035:
 		return SubsystemInfo{Vendor: 0x193d, Name: "NIC-ETH641F-LP-2P SFP28 2x25GbE PCIe Network Adapter"}, true
 	case 0x15b341170039:
@@ -64447,8 +65429,84 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x01de, Name: "Propolis Virtio network device"}, true
 	case 0x1af41001fffa:
 		return SubsystemInfo{Vendor: 0x01de, Name: "Propolis Virtio block device"}, true
+	case 0x1af410411100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410421100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410431100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410441100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410451100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410461100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410471100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410481100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410491100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af4104a1100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af4104b1100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af4104d1100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410501100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410511100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410521100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410531100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410541100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410551100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410561100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410571100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410581100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410591100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af4105a1100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af4105b1100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af4105c1100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af4105d1100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af4105e1100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af4105f1100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410601100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410611100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410621100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410631100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410641100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410651100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410661100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410671100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410681100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
+	case 0x1af410691100:
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
 	case 0x1af411101100:
-		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU Virtual Machine"}, true
+		return SubsystemInfo{Vendor: 0x1af4, Name: "QEMU"}, true
 	case 0x1b00c00100a2:
 		return SubsystemInfo{Vendor: 0x1ff9, Name: "CXL Memory Expander"}, true
 	case 0x1b00c00100a4:
@@ -64491,6 +65549,10 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1d49, Name: "ThinkSystem M.2 NVMe 2-Bay RAID Enablement Kit"}, true
 	case 0x1b4b22410307:
 		return SubsystemInfo{Vendor: 0x1d49, Name: "ThinkSystem 7mm NVMe 2-Bay Rear RAID Enablement Kit"}, true
+	case 0x1b4b22410800:
+		return SubsystemInfo{Vendor: 0x207d, Name: "TrustRAID B310n"}, true
+	case 0x1b4b22410801:
+		return SubsystemInfo{Vendor: 0x207d, Name: "TrustRAID B260s"}, true
 	case 0x1b4b22412112:
 		return SubsystemInfo{Vendor: 0x1028, Name: "BOSS-N1 Monolithic"}, true
 	case 0x1b4b22412113:
@@ -64505,6 +65567,8 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1028, Name: "BOSS-N1 DC-MHS"}, true
 	case 0x1b4b22412287:
 		return SubsystemInfo{Vendor: 0x1028, Name: "BOSS-N1 Modular DC-MHS"}, true
+	case 0x1b4b224123b0:
+		return SubsystemInfo{Vendor: 0x1028, Name: "eBOSS-N1 DC-MHS"}, true
 	case 0x1b4b22414000:
 		return SubsystemInfo{Vendor: 0x1b96, Name: "WD_BLACK AN1500 NVMe SSD"}, true
 	case 0x1b4b22419541:
@@ -64663,6 +65727,8 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1bb1, Name: "Nytro 5060H"}, true
 	case 0x1bb1010001a1:
 		return SubsystemInfo{Vendor: 0x1bb1, Name: "Nytro XP7102"}, true
+	case 0x1bd4298100b0:
+		return SubsystemInfo{Vendor: 0x1bd4, Name: "32G SFP28 EP2744 Apatter"}, true
 	case 0x1c5800030003:
 		return SubsystemInfo{Vendor: 0x1c58, Name: "Ultrastar SN100/SN150 NVMe SSD"}, true
 	case 0x1c58000304f5:
@@ -64971,6 +66037,8 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1ea0, Name: "TP2510 Series U.2 NVMe Datacenter SSD(7.68TB)"}, true
 	case 0x1c5f003f2201:
 		return SubsystemInfo{Vendor: 0x1ea0, Name: "TP2511 Series U.2 NVMe Datacenter SSD(7.68TB)"}, true
+	case 0x1c5f003f2202:
+		return SubsystemInfo{Vendor: 0x1ea0, Name: "TP2310 Series U.2 NVMe Datacenter SSD(7.68TB)"}, true
 	case 0x1c5f003f2210:
 		return SubsystemInfo{Vendor: 0x1ea0, Name: "TP2510 Series E3.S NVMe Datacenter SSD(7.68TB)"}, true
 	case 0x1c5f003f2211:
@@ -65333,12 +66401,30 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1dbe, Name: "Dongting-N3 DC SSD U.2 15360GB"}, true
 	case 0x1dbe56685009:
 		return SubsystemInfo{Vendor: 0x1dbe, Name: "Dongting-N3 DC SSD U.2 25600GB"}, true
-	case 0x1dbe56685010:
+	case 0x1dbe56685080:
 		return SubsystemInfo{Vendor: 0x1dbe, Name: "Dongting-N3 DC SSD U.2 30720GB"}, true
 	case 0x1dbe56685118:
 		return SubsystemInfo{Vendor: 0x1dbe, Name: "Dongting-N3Q DC QLC SSD U.2 15360GB"}, true
 	case 0x1dbe56685190:
 		return SubsystemInfo{Vendor: 0x1dbe, Name: "Dongting-N3Q DC QLC SSD U.2 30720GB"}, true
+	case 0x1dbe56685192:
+		return SubsystemInfo{Vendor: 0x1dbe, Name: "Dongting-N3Q DC QLC SSD U.2 61440GB"}, true
+	case 0x1dbe56685803:
+		return SubsystemInfo{Vendor: 0x1dbe, Name: "Dongting-N3 DC SSD E3.S 3200GB"}, true
+	case 0x1dbe56685804:
+		return SubsystemInfo{Vendor: 0x1dbe, Name: "Dongting-N3 DC SSD E3.S 3840GB"}, true
+	case 0x1dbe56685805:
+		return SubsystemInfo{Vendor: 0x1dbe, Name: "Dongting-N3 DC SSD E3.S 6400GB"}, true
+	case 0x1dbe56685806:
+		return SubsystemInfo{Vendor: 0x1dbe, Name: "Dongting-N3 DC SSD E3.S 7680GB"}, true
+	case 0x1dbe56685807:
+		return SubsystemInfo{Vendor: 0x1dbe, Name: "Dongting-N3 DC SSD E3.S 12800GB"}, true
+	case 0x1dbe56685808:
+		return SubsystemInfo{Vendor: 0x1dbe, Name: "Dongting-N3 DC SSD E3.S 15360GB"}, true
+	case 0x1dbe56685809:
+		return SubsystemInfo{Vendor: 0x1dbe, Name: "Dongting-N3 DC SSD E3.S 25600GB"}, true
+	case 0x1dbe56685880:
+		return SubsystemInfo{Vendor: 0x1dbe, Name: "Dongting-N3 DC SSD E3.S 30720GB"}, true
 	case 0x1dbe56686116:
 		return SubsystemInfo{Vendor: 0x1dbe, Name: "Dongting-Z3Q DC ZNS SSD U.2 7680GB"}, true
 	case 0x1dd80002100e:
@@ -65779,6 +66865,10 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1dd8, Name: "DSC2-200 50/100/200G 2-port 32G RAM 64G eMMC G2 DPU R4-T"}, true
 	case 0x1dd8100d5200:
 		return SubsystemInfo{Vendor: 0x1dd8, Name: "DSC3-2Q400 100/200/400G 2-port DDR5 128G eMMC G3 Services Card"}, true
+	case 0x1dd8100f5201:
+		return SubsystemInfo{Vendor: 0x1dd8, Name: "POLLARA-1Q400 100/200/400G 1-port Card"}, true
+	case 0x1dd810125201:
+		return SubsystemInfo{Vendor: 0x1dd8, Name: "POLLARA-1Q400 100/200/400G 1-port Card"}, true
 	case 0x1de000000000:
 		return SubsystemInfo{Vendor: 0x1de0, Name: "GC1-010X-ES [GroqCard]"}, true
 	case 0x1de00000c005:
@@ -65803,6 +66893,22 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1dee, Name: "NVMe SSD SP406 3.84T 2.5\" U.2"}, true
 	case 0x1dee41210013:
 		return SubsystemInfo{Vendor: 0x1dee, Name: "NVMe SSD SP406 7.68T 2.5\" U.2"}, true
+	case 0x1dee51610001:
+		return SubsystemInfo{Vendor: 0x1dee, Name: "NVMe SSD SP516 1.6T 2.5\" U.2"}, true
+	case 0x1dee51610002:
+		return SubsystemInfo{Vendor: 0x1dee, Name: "NVMe SSD SP516 3.2T 2.5\" U.2"}, true
+	case 0x1dee51610003:
+		return SubsystemInfo{Vendor: 0x1dee, Name: "NVMe SSD SP516 6.4T 2.5\" U.2"}, true
+	case 0x1dee51610004:
+		return SubsystemInfo{Vendor: 0x1dee, Name: "NVMe SSD SP516 12.8T 2.5\" U.2"}, true
+	case 0x1dee51610011:
+		return SubsystemInfo{Vendor: 0x1dee, Name: "NVMe SSD SP506 1.92T 2.5\" U.2"}, true
+	case 0x1dee51610012:
+		return SubsystemInfo{Vendor: 0x1dee, Name: "NVMe SSD SP506 3.84T 2.5\" U.2"}, true
+	case 0x1dee51610013:
+		return SubsystemInfo{Vendor: 0x1dee, Name: "NVMe SSD SP506 7.68T 2.5\" U.2"}, true
+	case 0x1dee51610014:
+		return SubsystemInfo{Vendor: 0x1dee, Name: "NVMe SSD SP506 15.36T 2.5\" U.2"}, true
 	case 0x1df302010001:
 		return SubsystemInfo{Vendor: 0x1df3, Name: "ENA1040"}, true
 	case 0x1df302010002:
@@ -65923,6 +67029,44 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1028, Name: "NVMe CD7 E3.S 3.84TB"}, true
 	case 0x1e0f00112195:
 		return SubsystemInfo{Vendor: 0x1028, Name: "NVMe CD7 E3.S 7.68TB"}, true
+	case 0x1e0f0013222d:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Ent NVMe CM7 FIPS U.2 RI 30.72TB"}, true
+	case 0x1e0f0013222e:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Ent NVMe CM7 FIPS U.2 RI 15.36TB"}, true
+	case 0x1e0f0013222f:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Ent NVMe CM7 FIPS U.2 RI 7.68TB"}, true
+	case 0x1e0f00132230:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Ent NVMe CM7 FIPS U.2 RI 3.84TB"}, true
+	case 0x1e0f00132231:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Ent NVMe CM7 FIPS U.2 RI 1.92TB"}, true
+	case 0x1e0f00132232:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Ent NVMe CM7 U.2 RI 30.72TB"}, true
+	case 0x1e0f00132233:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Ent NVMe CM7 U.2 RI 15.36TB"}, true
+	case 0x1e0f00132234:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Ent NVMe CM7 U.2 RI 7.68TB"}, true
+	case 0x1e0f00132235:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Ent NVMe CM7 U.2 RI 3.84TB"}, true
+	case 0x1e0f00132236:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Ent NVMe CM7 U.2 RI 1.92TB"}, true
+	case 0x1e0f00132237:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Ent NVMe CM7 FIPS U.2 MU 12.8TB"}, true
+	case 0x1e0f00132238:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Ent NVMe CM7 FIPS U.2 MU 6.4TB"}, true
+	case 0x1e0f00132239:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Ent NVMe CM7 FIPS U.2 MU 3.2TB"}, true
+	case 0x1e0f0013223a:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Ent NVMe CM7 FIPS U.2 MU 1.6TB"}, true
+	case 0x1e0f0013223b:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Ent NVMe CM7 U.2 MU 12.8TB"}, true
+	case 0x1e0f0013223c:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Ent NVMe CM7 U.2 MU 6.4TB"}, true
+	case 0x1e0f0013223d:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Ent NVMe CM7 U.2 MU 3.2TB"}, true
+	case 0x1e0f0013223e:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Ent NVMe CM7 U.2 MU 1.6TB"}, true
+	case 0x1e0f0013228c:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Ent NVMe CM7 U.2 MU 6.4TB"}, true
 	case 0x1e0f0014223f:
 		return SubsystemInfo{Vendor: 0x1028, Name: "Ent NVMe CM7 FIPS E3.S RI 15.36TB"}, true
 	case 0x1e0f00142240:
@@ -66253,6 +67397,18 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1e3b, Name: "Enterprise NVMe SSD HHHL 1.6TB (H3900)"}, true
 	case 0x1e3b10980091:
 		return SubsystemInfo{Vendor: 0x1e3b, Name: "Enterprise NVMe SSD HHHL 0.75TB (H3900)"}, true
+	case 0x1e3b13214000:
+		return SubsystemInfo{Vendor: 0x1e3b, Name: "AdgeStor NVMe SSD M.2 0.48TB"}, true
+	case 0x1e3b13214001:
+		return SubsystemInfo{Vendor: 0x1e3b, Name: "AdgeStor NVMe SSD M.2 0.96TB"}, true
+	case 0x1e3b13214002:
+		return SubsystemInfo{Vendor: 0x1e3b, Name: "AdgeStor NVMe SSD M.2 1.92TB"}, true
+	case 0x1e3b13214100:
+		return SubsystemInfo{Vendor: 0x1e3b, Name: "AdgeStor NVMe SSD M.2 0.48TB"}, true
+	case 0x1e3b13214101:
+		return SubsystemInfo{Vendor: 0x1e3b, Name: "AdgeStor NVMe SSD M.2 0.96TB"}, true
+	case 0x1e3b13214102:
+		return SubsystemInfo{Vendor: 0x1e3b, Name: "AdgeStor NVMe SSD M.2 1.92TB"}, true
 	case 0x1e3b1333001a:
 		return SubsystemInfo{Vendor: 0x1e3b, Name: "Enterprise NVMe SSD E3.S 1T 3.84TB (H5100)"}, true
 	case 0x1e3b1333001b:
@@ -66363,20 +67519,40 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1e95, Name: "NVMe SSD [3DNAND] 2.5\" U.2 (LJ1)"}, true
 	case 0x1e9510025636:
 		return SubsystemInfo{Vendor: 0x1ea0, Name: "TP1500 Series U.2 NVMe Datacenter SSD"}, true
+	case 0x1e9510100000:
+		return SubsystemInfo{Vendor: 0x1e95, Name: "M.2 2280 480 GB"}, true
+	case 0x1e9510100001:
+		return SubsystemInfo{Vendor: 0x1e95, Name: "M.2 2280 960 GB"}, true
+	case 0x1e9510100002:
+		return SubsystemInfo{Vendor: 0x1e95, Name: "M.2 2280 1,920 GB"}, true
+	case 0x1e9510100003:
+		return SubsystemInfo{Vendor: 0x1e95, Name: "M.2 2280 3,840 GB"}, true
 	case 0x1ec601000010:
 		return SubsystemInfo{Vendor: 0x1ec6, Name: "VA1V"}, true
 	case 0x1ec601000011:
 		return SubsystemInfo{Vendor: 0x1ec6, Name: "VA1A"}, true
 	case 0x1ec601000012:
-		return SubsystemInfo{Vendor: 0x1ec6, Name: "VA1"}, true
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VA1-16G"}, true
 	case 0x1ec601000013:
 		return SubsystemInfo{Vendor: 0x1ec6, Name: "VA1E"}, true
+	case 0x1ec601000014:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VA1L"}, true
+	case 0x1ec601000015:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VA1-32G"}, true
 	case 0x1ec601000020:
-		return SubsystemInfo{Vendor: 0x1ec6, Name: "VA10V"}, true
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VA10-32G"}, true
 	case 0x1ec601000021:
-		return SubsystemInfo{Vendor: 0x1ec6, Name: "VA10A"}, true
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VA12-32G"}, true
 	case 0x1ec601000022:
-		return SubsystemInfo{Vendor: 0x1ec6, Name: "VA10"}, true
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VA16"}, true
+	case 0x1ec601000023:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VA10-64G"}, true
+	case 0x1ec601000024:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VA10L"}, true
+	case 0x1ec601000025:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VA12-64G"}, true
+	case 0x1ec601000026:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VA12-128G"}, true
 	case 0x1ec601000030:
 		return SubsystemInfo{Vendor: 0x1ec6, Name: "VE1P"}, true
 	case 0x1ec601000031:
@@ -66387,10 +67563,28 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1ec6, Name: "VE1M"}, true
 	case 0x1ec601000034:
 		return SubsystemInfo{Vendor: 0x1ec6, Name: "VE1E"}, true
+	case 0x1ec601000035:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VE1C"}, true
+	case 0x1ec601000036:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VE1MT"}, true
+	case 0x1ec60100003a:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VR1S-8G"}, true
+	case 0x1ec60100003b:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VR1S-16G"}, true
+	case 0x1ec60100003c:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VR1M-8G"}, true
+	case 0x1ec60100003d:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VR1M-16G"}, true
+	case 0x1ec60100003e:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VR1MT-8G"}, true
+	case 0x1ec60100003f:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VR1MT-16G"}, true
 	case 0x1ec601000040:
-		return SubsystemInfo{Vendor: 0x1ec6, Name: "VV1U"}, true
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VA1M"}, true
 	case 0x1ec601000041:
 		return SubsystemInfo{Vendor: 0x1ec6, Name: "VA1U"}, true
+	case 0x1ec601000050:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VAM"}, true
 	case 0x1ec602000060:
 		return SubsystemInfo{Vendor: 0x1ec6, Name: "VG1200"}, true
 	case 0x1ec602000061:
@@ -66398,7 +67592,29 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 	case 0x1ec602000062:
 		return SubsystemInfo{Vendor: 0x1ec6, Name: "VG1800"}, true
 	case 0x1ec602000063:
-		return SubsystemInfo{Vendor: 0x1ec6, Name: "VG1000"}, true
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VG1000-32G"}, true
+	case 0x1ec602000064:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VG600"}, true
+	case 0x1ec602000065:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VG800"}, true
+	case 0x1ec602000066:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VG1000-64G"}, true
+	case 0x1ec602000067:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VG1000-24G"}, true
+	case 0x1ec602000068:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VG1000c-24G"}, true
+	case 0x1ec602000069:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VG1000c-32G"}, true
+	case 0x1ec60200006a:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VG1000c-64G"}, true
+	case 0x1ec60200006b:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VG1000c-16G"}, true
+	case 0x1ec60200006c:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VG1000c-48G"}, true
+	case 0x1ec60200006d:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VG600c"}, true
+	case 0x1ec60200006e:
+		return SubsystemInfo{Vendor: 0x1ec6, Name: "VG800c"}, true
 	case 0x1ec8880012a2:
 		return SubsystemInfo{Vendor: 0x1ec8, Name: "Fantasy I Device"}, true
 	case 0x1ec8881012a2:
@@ -66483,6 +67699,30 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD U.2 3.2TB (P8118Z3)"}, true
 	case 0x1ee411800427:
 		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD U.2 6.4TB (P8118Z3)"}, true
+	case 0x1ee411800515:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD U.2 1.92TB (P8118Z4)"}, true
+	case 0x1ee411800516:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD U.2 3.84TB (P8118Z4)"}, true
+	case 0x1ee411800517:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD U.2 7.68TB (P8118Z4)"}, true
+	case 0x1ee411800525:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD U.2 1.6TB (P8118Z4)"}, true
+	case 0x1ee411800526:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD U.2 3.2TB (P8118Z4)"}, true
+	case 0x1ee411800527:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD U.2 6.4TB (P8118Z4)"}, true
+	case 0x1ee411800615:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD U.2 1.92TB (P8128Z3)"}, true
+	case 0x1ee411800616:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD U.2 3.84TB (P8128Z3)"}, true
+	case 0x1ee411800617:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD U.2 7.68TB (P8128Z3)"}, true
+	case 0x1ee411800625:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD U.2 1.6TB (P8128Z3)"}, true
+	case 0x1ee411800626:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD U.2 3.2TB (P8128Z3)"}, true
+	case 0x1ee411800627:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD U.2 6.4TB (P8128Z3)"}, true
 	case 0x1ee411803013:
 		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 480GB (P8118E)"}, true
 	case 0x1ee411803014:
@@ -66531,6 +67771,54 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 3.2TB (P8118X)"}, true
 	case 0x1ee411803227:
 		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 6.4TB (P8118X)"}, true
+	case 0x1ee411803315:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 1.92TB (P8118E4)"}, true
+	case 0x1ee411803316:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 3.84TB (P8118E4)"}, true
+	case 0x1ee411803317:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 7.68TB (P8118E4)"}, true
+	case 0x1ee411803325:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 1.6TB (P8118E4)"}, true
+	case 0x1ee411803326:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 3.2TB (P8118E4)"}, true
+	case 0x1ee411803327:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 6.4TB (P8118E4)"}, true
+	case 0x1ee411803415:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 1.92TB (P8118Z3)"}, true
+	case 0x1ee411803416:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 3.84TB (P8118Z3)"}, true
+	case 0x1ee411803417:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 7.68TB (P8118Z3)"}, true
+	case 0x1ee411803425:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 1.6TB (P8118Z3)"}, true
+	case 0x1ee411803426:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 3.2TB (P8118Z3)"}, true
+	case 0x1ee411803427:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 6.4TB (P8118Z3)"}, true
+	case 0x1ee411803515:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 1.92TB (P8118Z4)"}, true
+	case 0x1ee411803516:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 3.84TB (P8118Z4)"}, true
+	case 0x1ee411803517:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 7.68TB (P8118Z4)"}, true
+	case 0x1ee411803525:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 1.6TB (P8118Z4)"}, true
+	case 0x1ee411803526:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 3.2TB (P8118Z4)"}, true
+	case 0x1ee411803527:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 6.4TB (P8118Z4)"}, true
+	case 0x1ee411803615:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 1.92TB (P8128Z3)"}, true
+	case 0x1ee411803616:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 3.84TB (P8128Z3)"}, true
+	case 0x1ee411803617:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 7.68TB (P8128Z3)"}, true
+	case 0x1ee411803625:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 1.6TB (P8128Z3)"}, true
+	case 0x1ee411803626:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 3.2TB (P8128Z3)"}, true
+	case 0x1ee411803627:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD AIC 6.4TB (P8128Z3)"}, true
 	case 0x1ee41180abcd:
 		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD U.2"}, true
 	case 0x1ee411812015:
@@ -66569,6 +67857,54 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 3.2TB (P8118X)"}, true
 	case 0x1ee411812227:
 		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 6.4TB (P8118X)"}, true
+	case 0x1ee411812315:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 1.92TB (P8118E4)"}, true
+	case 0x1ee411812316:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 3.84TB (P8118E4)"}, true
+	case 0x1ee411812317:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 7.68TB (P8118E4)"}, true
+	case 0x1ee411812325:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 1.6TB (P8118E4)"}, true
+	case 0x1ee411812326:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 3.2TB (P8118E4)"}, true
+	case 0x1ee411812327:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 6.4TB (P8118E4)"}, true
+	case 0x1ee411812415:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 1.92TB (P8118Z3)"}, true
+	case 0x1ee411812416:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 3.84TB (P8118Z3)"}, true
+	case 0x1ee411812417:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 7.68TB (P8118Z3)"}, true
+	case 0x1ee411812425:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 1.6TB (P8118Z3)"}, true
+	case 0x1ee411812426:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 3.2TB (P8118Z3)"}, true
+	case 0x1ee411812427:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 6.4TB (P8118Z3)"}, true
+	case 0x1ee411812515:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 1.92TB (P8118Z4)"}, true
+	case 0x1ee411812516:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 3.84TB (P8118Z4)"}, true
+	case 0x1ee411812517:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 7.68TB (P8118Z4)"}, true
+	case 0x1ee411812525:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 1.6TB (P8118Z4)"}, true
+	case 0x1ee411812526:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 3.2TB (P8118Z4)"}, true
+	case 0x1ee411812527:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 6.4TB (P8118Z4)"}, true
+	case 0x1ee411812615:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 1.92TB (P8128Z3)"}, true
+	case 0x1ee411812616:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 3.84TB (P8128Z3)"}, true
+	case 0x1ee411812617:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 7.68TB (P8128Z3)"}, true
+	case 0x1ee411812625:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 1.6TB (P8128Z3)"}, true
+	case 0x1ee411812626:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 3.2TB (P8128Z3)"}, true
+	case 0x1ee411812627:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD E1.S 6.4TB (P8128Z3)"}, true
 	case 0x1ee411821013:
 		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 480GB (P8118E)"}, true
 	case 0x1ee411821014:
@@ -66617,6 +67953,86 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 1.6TB (P8118X)"}, true
 	case 0x1ee411821226:
 		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 3.2TB (P8118X)"}, true
+	case 0x1ee411821313:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 480GB (P8118E4)"}, true
+	case 0x1ee411821314:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 960GB (P8118E4)"}, true
+	case 0x1ee411821315:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 1.92TB (P8118E4)"}, true
+	case 0x1ee411821316:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 3.84TB (P8118E4)"}, true
+	case 0x1ee411821317:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 7.68TB (P8118E4)"}, true
+	case 0x1ee411821323:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 400GB (P8118E4)"}, true
+	case 0x1ee411821324:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 800GB (P8118E4)"}, true
+	case 0x1ee411821325:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 1.6TB (P8118E4)"}, true
+	case 0x1ee411821326:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 3.2TB (P8118E4)"}, true
+	case 0x1ee411821327:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 6.4TB (P8118E4)"}, true
+	case 0x1ee411821413:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 480GB (P8118Z3)"}, true
+	case 0x1ee411821414:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 960GB (P8118Z3)"}, true
+	case 0x1ee411821415:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 1.92TB (P8118Z3)"}, true
+	case 0x1ee411821416:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 3.84TB (P8118Z3)"}, true
+	case 0x1ee411821417:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 7.68TB (P8118Z3)"}, true
+	case 0x1ee411821423:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 400GB(P8118Z3)"}, true
+	case 0x1ee411821424:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 800GB (P8118Z3)"}, true
+	case 0x1ee411821425:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 1.6TB (P8118Z3)"}, true
+	case 0x1ee411821426:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 3.2TB (P8118Z3)"}, true
+	case 0x1ee411821427:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 6.4TB (P8118Z3)"}, true
+	case 0x1ee411821513:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 480GB (P8118Z4)"}, true
+	case 0x1ee411821514:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 960GB (P8118Z4)"}, true
+	case 0x1ee411821515:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 1.92TB (P8118Z4)"}, true
+	case 0x1ee411821516:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 3.84TB (P8118Z4)"}, true
+	case 0x1ee411821517:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 7.68TB (P8118Z4)"}, true
+	case 0x1ee411821523:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 400GB (P8118Z4)"}, true
+	case 0x1ee411821524:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 800GB (P8118Z4)"}, true
+	case 0x1ee411821525:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 1.6TB (P8118Z4)"}, true
+	case 0x1ee411821526:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 3.2TB (P8118Z4)"}, true
+	case 0x1ee411821527:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 6.4TB (P8118Z4)"}, true
+	case 0x1ee411821613:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 480GB (P8128Z3)"}, true
+	case 0x1ee411821614:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 960GB (P8128Z3)"}, true
+	case 0x1ee411821615:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 1.92TB (P8128Z3)"}, true
+	case 0x1ee411821616:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 3.84TB (P8128Z3)"}, true
+	case 0x1ee411821617:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 7.68TB (P8128Z3)"}, true
+	case 0x1ee411821623:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 400GB (P8128Z3)"}, true
+	case 0x1ee411821624:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 800GB (P8128Z3)"}, true
+	case 0x1ee411821625:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 1.6TB (P8128Z3)"}, true
+	case 0x1ee411821626:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 3.2TB (P8128Z3)"}, true
+	case 0x1ee411821627:
+		return SubsystemInfo{Vendor: 0x1ee4, Name: "NVMe SSD M.2 6.4TB (P8128Z3)"}, true
 	case 0x1f0f10410001:
 		return SubsystemInfo{Vendor: 0x1f0f, Name: "D1055AS vDPA Ethernet Controller"}, true
 	case 0x1f0f10420001:
@@ -66692,29 +68108,177 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 	case 0x1f3f903200a1:
 		return SubsystemInfo{Vendor: 0x1f3f, Name: "Dual Port 100GE SDI5.1"}, true
 	case 0x1f4710010001:
-		return SubsystemInfo{Vendor: 0x1f47, Name: "FLEXFLOW-2200T Ethernet 10G 2P"}, true
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 10G 2P FLEXFLOW-2200T"}, true
 	case 0x1f4710010002:
-		return SubsystemInfo{Vendor: 0x1f47, Name: "FLEXFLOW-2200T Ethernet 25G 2P"}, true
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P FLEXFLOW-2200T"}, true
 	case 0x1f4710010003:
-		return SubsystemInfo{Vendor: 0x1f47, Name: "FLEXFLOW-2200T Ethernet 40G 2P"}, true
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 40G 2P FLEXFLOW-2200T"}, true
 	case 0x1f4710010004:
-		return SubsystemInfo{Vendor: 0x1f47, Name: "FLEXFLOW-2200T Ethernet 100G 1P"}, true
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 1P FLEXFLOW-2200T"}, true
 	case 0x1f4710010005:
-		return SubsystemInfo{Vendor: 0x1f47, Name: "FLEXFLOW-2200T Ethernet 100G 2P"}, true
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P FLEXFLOW-2200T"}, true
 	case 0x1f4710010006:
-		return SubsystemInfo{Vendor: 0x1f47, Name: "FLEXFLOW-2200T Ethernet 10G 2P"}, true
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 10G 2P FLEXFLOW-2200T"}, true
 	case 0x1f4710010007:
-		return SubsystemInfo{Vendor: 0x1f47, Name: "FLEXFLOW-2200T Ethernet 25G 2P"}, true
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P FLEXFLOW-2200T"}, true
 	case 0x1f4710010008:
-		return SubsystemInfo{Vendor: 0x1f47, Name: "FLEXFLOW-2200T Ethernet 40G 2P"}, true
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 40G 2P FLEXFLOW-2200T"}, true
 	case 0x1f4710010009:
-		return SubsystemInfo{Vendor: 0x1f47, Name: "FLEXFLOW-2200T Ethernet 100G 1P"}, true
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 1P FLEXFLOW-2200T"}, true
 	case 0x1f471001000a:
-		return SubsystemInfo{Vendor: 0x1f47, Name: "FLEXFLOW-2200T Ethernet 100G 2P"}, true
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P FLEXFLOW-2200T"}, true
+	case 0x1f4710110001:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 10G 2P FLEXFLOW-2200T"}, true
+	case 0x1f4710110002:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P FLEXFLOW-2200T"}, true
+	case 0x1f4710110003:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 40G 2P FLEXFLOW-2200T"}, true
+	case 0x1f4710110004:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 1P FLEXFLOW-2200T"}, true
+	case 0x1f4710110005:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P FLEXFLOW-2200T"}, true
+	case 0x1f4710110006:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 10G 2P FLEXFLOW-2200T"}, true
+	case 0x1f4710110007:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P FLEXFLOW-2200T"}, true
+	case 0x1f4710110008:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 40G 2P FLEXFLOW-2200T"}, true
+	case 0x1f4710110009:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 1P FLEXFLOW-2200T"}, true
+	case 0x1f471011000a:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P FLEXFLOW-2200T"}, true
+	case 0x1f4731010001:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 10G 2P FLEXFLOW-2100R"}, true
+	case 0x1f4731010002:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P FLEXFLOW-2100R"}, true
+	case 0x1f4731010003:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 50G 2P FLEXFLOW-2100R"}, true
+	case 0x1f4731010004:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P FLEXFLOW-2100R"}, true
+	case 0x1f4731010005:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 10G 2P FLEXFLOW-2100R"}, true
+	case 0x1f4731010006:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P FLEXFLOW-2100R"}, true
+	case 0x1f4731010007:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 50G 2P FLEXFLOW-2100R"}, true
+	case 0x1f4731010008:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P FLEXFLOW-2100R"}, true
+	case 0x1f4732010001:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 10G 2P FLEXFLOW-2200R"}, true
+	case 0x1f4732010002:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P FLEXFLOW-2200R"}, true
+	case 0x1f4732010003:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 50G 2P FLEXFLOW-2200R"}, true
+	case 0x1f4732010004:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P FLEXFLOW-2200R"}, true
+	case 0x1f4732010005:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 10G 2P FLEXFLOW-2200R"}, true
+	case 0x1f4732010006:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P FLEXFLOW-2200R"}, true
+	case 0x1f4732010007:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 50G 2P FLEXFLOW-2200R"}, true
+	case 0x1f4732010008:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P FLEXFLOW-2200R"}, true
+	case 0x1f4732110001:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 10G 2P FLEXFLOW-2200R"}, true
+	case 0x1f4732110002:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P FLEXFLOW-2200R"}, true
+	case 0x1f4732110003:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 50G 2P FLEXFLOW-2200R"}, true
+	case 0x1f4732110004:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P FLEXFLOW-2200R"}, true
+	case 0x1f4732110005:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 10G 2P FLEXFLOW-2200R"}, true
+	case 0x1f4732110006:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P FLEXFLOW-2200R"}, true
+	case 0x1f4732110007:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 50G 2P FLEXFLOW-2200R"}, true
+	case 0x1f4732110008:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P FLEXFLOW-2200R"}, true
+	case 0x1f4740010001:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P CONFLUX-2200E"}, true
+	case 0x1f4740010002:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 40G 2P CONFLUX-2200E"}, true
+	case 0x1f4740010003:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 1P CONFLUX-2200E"}, true
+	case 0x1f4740010004:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P CONFLUX-2200E"}, true
+	case 0x1f4740010005:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P CONFLUX-2200E"}, true
+	case 0x1f4740010006:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 40G 2P CONFLUX-2200E"}, true
+	case 0x1f4740010007:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 1P CONFLUX-2200E"}, true
+	case 0x1f4740010008:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P CONFLUX-2200E"}, true
+	case 0x1f4750010001:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P CONFLUX-2200P"}, true
+	case 0x1f4750010003:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P CONFLUX-2200P"}, true
+	case 0x1f4750010004:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P CONFLUX-2200P"}, true
+	case 0x1f4750010006:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P CONFLUX-2200P"}, true
+	case 0x1f4750010007:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P CONFLUX-2200P"}, true
+	case 0x1f4750010009:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P CONFLUX-2200P"}, true
+	case 0x1f475001000a:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P CONFLUX-2200P"}, true
+	case 0x1f475001000c:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P CONFLUX-2200P"}, true
+	case 0x1f4750030001:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P CONFLUX-2200P"}, true
+	case 0x1f4750030003:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P CONFLUX-2200P"}, true
+	case 0x1f4750030004:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P CONFLUX-2200P"}, true
+	case 0x1f4750030006:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P CONFLUX-2200P"}, true
+	case 0x1f4750030007:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P CONFLUX-2200P"}, true
+	case 0x1f4750030009:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P CONFLUX-2200P"}, true
+	case 0x1f475003000a:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P CONFLUX-2200P"}, true
+	case 0x1f475003000c:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P CONFLUX-2200P"}, true
+	case 0x1f4750050001:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "CONFLUX-2200P Ethernet Controller [MGMT Function]"}, true
+	case 0x1f4750050002:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "CONFLUX-2200P Ethernet Controller [MGMT Function] DPU"}, true
+	case 0x1f4750060001:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "CONFLUX-2200P Ethernet Controller [YDMI Function]"}, true
+	case 0x1f4750060002:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "CONFLUX-2200P Ethernet Controller [YDMI Function] DPU"}, true
+	case 0x1f4750110004:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P CONFLUX-2200P"}, true
+	case 0x1f4750110006:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P CONFLUX-2200P"}, true
+	case 0x1f475011000a:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 25G 2P CONFLUX-2200P"}, true
+	case 0x1f475011000c:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "Ethernet 100G 2P CONFLUX-2200P"}, true
+	case 0x1f4750150001:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "CONFLUX-2200P Ethernet Controller [MGMT Function]"}, true
+	case 0x1f4750150002:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "CONFLUX-2200P Ethernet Controller [MGMT Function] DPU"}, true
+	case 0x1f4750160001:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "CONFLUX-2200P Ethernet Controller [YDMI Function]"}, true
+	case 0x1f4750160002:
+		return SubsystemInfo{Vendor: 0x1f47, Name: "CONFLUX-2200P Ethernet Controller [YDMI Function] DPU"}, true
 	case 0x1f67111100b1:
 		return SubsystemInfo{Vendor: 0x1ff9, Name: "ENFY1102-QP2"}, true
 	case 0x1f67111100b2:
 		return SubsystemInfo{Vendor: 0x1bd4, Name: "O1E2YYSA100"}, true
+	case 0x1f67111100b8:
+		return SubsystemInfo{Vendor: 0x1ff9, Name: "ENFY1202-QP1"}, true
+	case 0x1f67111100b9:
+		return SubsystemInfo{Vendor: 0x1bd4, Name: "O2E1YYSA100"}, true
+	case 0x1f67111100ba:
+		return SubsystemInfo{Vendor: 0x1ff9, Name: "ENFY1251-SP4"}, true
+	case 0x1f67111100bb:
+		return SubsystemInfo{Vendor: 0x1ff9, Name: "ENFY1251-SP4 (Roce)"}, true
 	case 0x1fb010001001:
 		return SubsystemInfo{Vendor: 0x1fb0, Name: "NF1001"}, true
 	case 0x1fb010001002:
@@ -66815,14 +68379,22 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1546, Name: "GE10-PCIE4XG202P 10Gbase-T/NBASE-T Ethernet Adapter"}, true
 	case 0x1fc940278104:
 		return SubsystemInfo{Vendor: 0x1432, Name: "10 Gigabit Ethernet PCI Express Adapter"}, true
+	case 0x1fe416000001:
+		return SubsystemInfo{Vendor: 0x1fe4, Name: "Enterprise NVMe SSD U.2 15.36TB (HP600)"}, true
+	case 0x1fe416000003:
+		return SubsystemInfo{Vendor: 0x1fe4, Name: "Enterprise NVMe SSD U.2 12.80TB (HP630)"}, true
+	case 0x1fe416000011:
+		return SubsystemInfo{Vendor: 0x1fe4, Name: "Enterprise NVMe SSD U.2 30.72TB (HP620)"}, true
+	case 0x1fe416000013:
+		return SubsystemInfo{Vendor: 0x1fe4, Name: "Enterprise NVMe SSD U.2 61.44TB (HP620)"}, true
 	case 0x1fe416000075:
 		return SubsystemInfo{Vendor: 0x1fe4, Name: "Enterprise NVMe SSD U.2 3.84TB(HP610)"}, true
 	case 0x1fe416000076:
 		return SubsystemInfo{Vendor: 0x1fe4, Name: "Enterprise NVMe SSD U.2 7.68TB(HP610)"}, true
-	case 0x1fe416000077:
-		return SubsystemInfo{Vendor: 0x1fe4, Name: "Enterprise NVMe SSD U.2 6.40TB(HP630)"}, true
 	case 0x1fe416000078:
 		return SubsystemInfo{Vendor: 0x1fe4, Name: "Enterprise NVMe SSD U.2 3.20TB(HP630)"}, true
+	case 0x1fe416000079:
+		return SubsystemInfo{Vendor: 0x1fe4, Name: "Enterprise NVMe SSD U.2 6.40TB (HP630)"}, true
 	case 0x1ff210a10c11:
 		return SubsystemInfo{Vendor: 0x1ff2, Name: "10GE Ethernet Adapter 1160-2X"}, true
 	case 0x1ff220a10a11:
@@ -66905,6 +68477,16 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x2061, Name: "E520Q NVMe SSD 61.44TB PCIe 5.0 U.2"}, true
 	case 0x206152002063:
 		return SubsystemInfo{Vendor: 0x2061, Name: "E520Q NVMe SSD 122.88TB PCIe 5.0 U.2"}, true
+	case 0x20ba12021202:
+		return SubsystemInfo{Vendor: 0x20ba, Name: "NVMe SSD V2000 (DRAM-less)"}, true
+	case 0x20bc10011082:
+		return SubsystemInfo{Vendor: 0x20bc, Name: "Ethernet Network Adapter XS-N1082-2X for 10GbE SFP+ Dual-port"}, true
+	case 0x20bc10012083:
+		return SubsystemInfo{Vendor: 0x20bc, Name: "Ethernet Network Adapter XS-N2083-2X for 25GbE SFP28 SFP+ Dual-port ROCEv2"}, true
+	case 0x20bc10012084:
+		return SubsystemInfo{Vendor: 0x20bc, Name: "Ethernet Network Adapter XS-N2084-2X for 25GbE SFP28 SFP+ Dual-port ROCEv2"}, true
+	case 0x20bc10014084:
+		return SubsystemInfo{Vendor: 0x20bc, Name: "Ethernet Network Adapter XS-N4084-2X for 100GbE QSFP28/56 Dual-port"}, true
 	case 0x338800211050:
 		return SubsystemInfo{Vendor: 0x4c53, Name: "CT7 mainboard"}, true
 	case 0x338800211080:
@@ -69181,6 +70763,12 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x8086, Name: "Ethernet Network Adapter E830-XXV-2"}, true
 	case 0x808612d30004:
 		return SubsystemInfo{Vendor: 0x8086, Name: "Ethernet Network Adapter E830-XXV-4 for OCP 3.0"}, true
+	case 0x808612d30005:
+		return SubsystemInfo{Vendor: 0x8086, Name: "Ethernet Network Adapter E830-XXV-8F for OCP 3.0"}, true
+	case 0x808612d30006:
+		return SubsystemInfo{Vendor: 0x8086, Name: "Ethernet Network Adapter E830-XXV-8F"}, true
+	case 0x808612d30007:
+		return SubsystemInfo{Vendor: 0x8086, Name: "Ethernet Network Adapter E830-XXV-4F"}, true
 	case 0x808612de0001:
 		return SubsystemInfo{Vendor: 0x8086, Name: "Ethernet Network Adapter E830-XXV-2 for OCP 3.0"}, true
 	case 0x808612de0003:
@@ -69531,6 +71119,8 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1059, Name: "RD-01213 10GbE interface"}, true
 	case 0x808615380190:
 		return SubsystemInfo{Vendor: 0x1059, Name: "RD20057 M.2 Dual 1GbE-T1 15m"}, true
+	case 0x8086153a0617:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Precision T5810"}, true
 	case 0x8086153a1909:
 		return SubsystemInfo{Vendor: 0x103c, Name: "ZBook 15"}, true
 	case 0x8086153a1998:
@@ -70797,6 +72387,8 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x17aa, Name: "ThinkPad R60e"}, true
 	case 0x8086244820ae:
 		return SubsystemInfo{Vendor: 0x17aa, Name: "ThinkPad T61/R61"}, true
+	case 0x8086244820f4:
+		return SubsystemInfo{Vendor: 0x17aa, Name: "ThinkPad T400"}, true
 	case 0x80862448309f:
 		return SubsystemInfo{Vendor: 0x103c, Name: "Compaq nx9420 Notebook"}, true
 	case 0x8086244830a3:
@@ -73737,6 +75329,8 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x104d, Name: "VAIO VGN-NR120E"}, true
 	case 0x80862850cc47:
 		return SubsystemInfo{Vendor: 0xe4bf, Name: "CCG-RUMBA"}, true
+	case 0x808628c0011a:
+		return SubsystemInfo{Vendor: 0x1d49, Name: "Intel VROC (VMD NVMe RAID) for ThinkSystem V4 PL"}, true
 	case 0x808629140211:
 		return SubsystemInfo{Vendor: 0x1028, Name: "Optiplex 755"}, true
 	case 0x80862916020d:
@@ -74131,6 +75725,8 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1028, Name: "Inspiron 530"}, true
 	case 0x808629400211:
 		return SubsystemInfo{Vendor: 0x1028, Name: "Optiplex 755"}, true
+	case 0x8086294020f3:
+		return SubsystemInfo{Vendor: 0x17aa, Name: "ThinkPad T400"}, true
 	case 0x808629402940:
 		return SubsystemInfo{Vendor: 0x8086, Name: "Optiplex 755"}, true
 	case 0x808629402a6f:
@@ -74141,14 +75737,20 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x1043, Name: "P5K PRO Motherboard: 82801IR [ICH9R]"}, true
 	case 0x80862942020d:
 		return SubsystemInfo{Vendor: 0x1028, Name: "Inspiron 530"}, true
+	case 0x8086294220f3:
+		return SubsystemInfo{Vendor: 0x17aa, Name: "ThinkPad T400"}, true
 	case 0x80862944020d:
 		return SubsystemInfo{Vendor: 0x1028, Name: "Inspiron 530"}, true
 	case 0x808629442a6f:
 		return SubsystemInfo{Vendor: 0x103c, Name: "Asus IPIBL-LB Motherboard"}, true
 	case 0x80862946020d:
 		return SubsystemInfo{Vendor: 0x1028, Name: "Inspiron 530"}, true
+	case 0x8086294620f3:
+		return SubsystemInfo{Vendor: 0x17aa, Name: "ThinkPad T400"}, true
 	case 0x80862948020d:
 		return SubsystemInfo{Vendor: 0x1028, Name: "Inspiron 530"}, true
+	case 0x8086294820f3:
+		return SubsystemInfo{Vendor: 0x17aa, Name: "ThinkPad T400"}, true
 	case 0x808629487345:
 		return SubsystemInfo{Vendor: 0x1462, Name: "MS-7345 Motherboard: Intel 82801I/IR [ICH9/ICH9R]"}, true
 	case 0x808629488277:
@@ -74305,15 +75907,21 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0xe4bf, Name: "CCM-BOOGIE"}, true
 	case 0x80862a4202aa:
 		return SubsystemInfo{Vendor: 0x1028, Name: "Dell Inspiron 1545"}, true
+	case 0x80862a4220e4:
+		return SubsystemInfo{Vendor: 0x17aa, Name: "ThinkPad T400"}, true
 	case 0x80862a422112:
 		return SubsystemInfo{Vendor: 0x17aa, Name: "ThinkPad T400"}, true
 	case 0x80862a42cc4d:
 		return SubsystemInfo{Vendor: 0xe4bf, Name: "CCM-BOOGIE"}, true
+	case 0x80862a4320e4:
+		return SubsystemInfo{Vendor: 0x17aa, Name: "ThinkPad T400"}, true
 	case 0x80862a432112:
 		return SubsystemInfo{Vendor: 0x17aa, Name: "ThinkPad T400"}, true
 	case 0x80862a43cc4d:
 		return SubsystemInfo{Vendor: 0xe4bf, Name: "CCM-BOOGIE"}, true
 	case 0x80862a4420e6:
+		return SubsystemInfo{Vendor: 0x17aa, Name: "ThinkPad T400"}, true
+	case 0x80862a4720ec:
 		return SubsystemInfo{Vendor: 0x17aa, Name: "ThinkPad T400"}, true
 	case 0x80862e123048:
 		return SubsystemInfo{Vendor: 0x17aa, Name: "ThinkCentre M6258"}, true
@@ -75649,24 +77257,40 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x15d9, Name: "X10DRW-i"}, true
 	case 0x80868d061031:
 		return SubsystemInfo{Vendor: 0x17aa, Name: "ThinkServer RAID 110i"}, true
+	case 0x80868d100617:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Precision T5810"}, true
+	case 0x80868d120617:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Precision T5810"}, true
+	case 0x80868d200617:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Precision T5810"}, true
+	case 0x80868d220617:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Precision T5810"}, true
 	case 0x80868d220821:
 		return SubsystemInfo{Vendor: 0x15d9, Name: "X10DRW-i"}, true
 	case 0x80868d220832:
 		return SubsystemInfo{Vendor: 0x15d9, Name: "X10SRL-F"}, true
 	case 0x80868d240821:
 		return SubsystemInfo{Vendor: 0x15d9, Name: "X10DRW-i"}, true
+	case 0x80868d260617:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Precision T5810"}, true
 	case 0x80868d260821:
 		return SubsystemInfo{Vendor: 0x15d9, Name: "X10DRW-i"}, true
 	case 0x80868d260832:
 		return SubsystemInfo{Vendor: 0x15d9, Name: "X10SRL-F"}, true
+	case 0x80868d2d0617:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Precision T5810"}, true
 	case 0x80868d2d0821:
 		return SubsystemInfo{Vendor: 0x15d9, Name: "X10DRW-i"}, true
 	case 0x80868d2d0832:
 		return SubsystemInfo{Vendor: 0x15d9, Name: "X10SRL-F"}, true
+	case 0x80868d310617:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Precision T5810"}, true
 	case 0x80868d310821:
 		return SubsystemInfo{Vendor: 0x15d9, Name: "X10DRW-i"}, true
 	case 0x80868d310832:
 		return SubsystemInfo{Vendor: 0x15d9, Name: "X10SRL-F"}, true
+	case 0x80868d3a0617:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Precision T5810"}, true
 	case 0x80868d3a0821:
 		return SubsystemInfo{Vendor: 0x15d9, Name: "X10DRW-i"}, true
 	case 0x80868d3a0832:
@@ -75675,12 +77299,18 @@ func lookupSubsystem(key VendorProductSubsystem) (SubsystemInfo, bool) {
 		return SubsystemInfo{Vendor: 0x15d9, Name: "X10DRW-i"}, true
 	case 0x80868d3b0832:
 		return SubsystemInfo{Vendor: 0x15d9, Name: "X10SRL-F"}, true
+	case 0x80868d440617:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Precision T5810"}, true
 	case 0x80868d440821:
 		return SubsystemInfo{Vendor: 0x15d9, Name: "X10DRW-i"}, true
 	case 0x80868d440832:
 		return SubsystemInfo{Vendor: 0x15d9, Name: "X10SRL-F"}, true
+	case 0x80868d620617:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Precision T5810"}, true
 	case 0x80868d620821:
 		return SubsystemInfo{Vendor: 0x15d9, Name: "X10DRW-i"}, true
+	case 0x80868d7c0617:
+		return SubsystemInfo{Vendor: 0x1028, Name: "Precision T5810"}, true
 	case 0x80868d7c0821:
 		return SubsystemInfo{Vendor: 0x15d9, Name: "X10DRW-i"}, true
 	case 0x80868d7c0832:
