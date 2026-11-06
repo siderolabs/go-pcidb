@@ -3,7 +3,7 @@
 `go-pcidb` provides a Go library for converting PCI IDs to descriptive names using
 [PCI ID database](https://pci-ids.ucw.cz/).
 
-The library embeds the database as compact static Go `map` structures (using `go generate`) to avoid
+The library compiles the database as compact binary embedded blobs (using `go generate`) to avoid
 parsing costs and optimize memory usage.
 
 An alternative Go library that does parsing on load from `pci.ids` is [github.com/jaypipes/pcidb](https://github.com/jaypipes/pcidb).

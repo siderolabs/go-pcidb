@@ -2,7 +2,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-// Package pcidb provides generated Go structs describing PCI ID database optimized for performance and low GC pressure.
+// Package pcidb provides a compact, embedded PCI ID database with allocation-free lookups.
 package pcidb
 
 //go:generate go run gen.go
@@ -45,24 +45,24 @@ type VendorProductSubsystem = uint64
 
 // LookupClass by ID.
 func LookupClass(classID Class) (string, bool) {
-	return lookupClass(classID)
+	return lookup(classes, 1, uint32(classID))
 }
 
 // LookupSubclass by ID.
 func LookupSubclass(classID Class, subclassID Subclass) (string, bool) {
 	key := uint16(classID)<<8 | uint16(subclassID)
 
-	return lookupSubclass(key)
+	return lookup(subclasses, 2, uint32(key))
 }
 
 // LookupVendor by ID.
 func LookupVendor(vendorID Vendor) (string, bool) {
-	return lookupVendor(vendorID)
+	return lookup(vendors, 2, uint32(vendorID))
 }
 
 // LookupProduct by vendor and product IDs.
 func LookupProduct(vendorID Vendor, productID Product) (string, bool) {
 	key := uint32(vendorID)<<16 | uint32(productID)
 
-	return lookupProduct(key)
+	return lookup(products, 4, key)
 }

@@ -31,3 +31,9 @@ func TestLookup(t *testing.T) {
 	assert.True(t, ok)
 	assert.Equal(t, "RV280 [Radeon 9200 PRO / 9250]", v)
 }
+
+func BenchmarkLookupProduct(b *testing.B) {
+	for b.Loop() {
+		pcidb.LookupProduct(0x8086, 0x1572)
+	}
+}
